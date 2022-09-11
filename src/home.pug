@@ -1,0 +1,170 @@
+include includes/head.pug
+
+body
+
+  #root
+    include includes/header.pug
+
+    main(role="main").main
+      picture.main__bg
+        img(src="/images/main-img-1.jpg", alt="Train like a warrior")
+      .container.main__contaier
+        .main__content
+          h1.title-size-1.main__title Train like&nbsp;a warrior
+          a(href="#").btn.btn--theme-white.main__btn Let’s row
+        .main__benefits
+          p.main__benefits-item Build strength
+          p.main__benefits-item Improve cardio
+          p.main__benefits-item Low-impact
+          p.main__benefits-item Full body exercise
+
+    section.info
+      .container.info__contaier
+        .info__word
+          .info__word-card Meet
+          .info__word-card Row
+          .info__word-card Warrior
+        h2.info__title Your Home Gym Secret Weapon for Transforming Your Strength,&nbsp;Health, Body and Life.
+
+    .good-section-list
+      section.good-section.good-section-list__item
+        .good-section__inner
+          .good-section__media
+            picture.good-section__picture
+              img(src="/images/good-img-1.png", alt="Get a solid, low-impact, full-body workout at home")
+          .good-section__content
+            ul.nav-good.good-section__nav
+              li.nav-good__item
+                a(href="#").nav-good__link.is-active Versatility
+              li.nav-good__item
+                a(href="#").nav-good__link Simple assembly
+              li.nav-good__item
+                a(href="#").nav-good__link Compact design
+              li.nav-good__item
+                a(href="#").nav-good__link Ease of use
+            .good-section__suptitle Versatility
+            h2.good-section__title Get a solid, low-impact, full-body workout at home
+            .content.good-section__text
+              p Like a Swiss army knife, Row Warrior is a tool that provides a wide array of benefits. Use it to build muscle, gain strength, improve cardio, increase stamina, or simply improve your overall well-being without ever walking out your door.
+      section.good-section.good-section-list__item
+        .good-section__inner
+          .good-section__media
+            picture.good-section__picture
+              img(src="/images/good-img-2.png", alt="Unbox, unwrap, assemble, and row")
+          .good-section__content
+            ul.nav-good.good-section__nav
+              li.nav-good__item
+                a(href="#").nav-good__link Versatility
+              li.nav-good__item
+                a(href="#").nav-good__link.is-active Simple assembly
+              li.nav-good__item
+                a(href="#").nav-good__link Compact design
+              li.nav-good__item
+                a(href="#").nav-good__link Ease of use
+            .good-section__suptitle Simple assembly
+            h2.good-section__title Unbox, unwrap,<br>assemble, and row
+            .content.good-section__text
+              p When Row Warrior arrives at your door, you’ll be ready to row in 30 minutes or less. Our no-fuss design requires little assembly and comes with simple, easy-to-follow instructions so you can hop and get rowing with ease.
+      section.good-section.good-section-list__item
+        .good-section__inner
+          .good-section__media
+            picture.good-section__picture
+              img(src="/images/good-img-3.png", alt="No space? No problem")
+          .good-section__content
+            ul.nav-good.good-section__nav
+              li.nav-good__item
+                a(href="#").nav-good__link Versatility
+              li.nav-good__item
+                a(href="#").nav-good__link Simple assembly
+              li.nav-good__item
+                a(href="#").nav-good__link.is-active Compact design
+              li.nav-good__item
+                a(href="#").nav-good__link Ease of use
+            .good-section__suptitle Compact design
+            h2.good-section__title No space?<br>No problem
+            .content.good-section__text
+              p Featuring a sleek, simple, compact design, Row Warrior can easily be folded, separated, and stored away. Whether you’re a workout warrior in a small living space, or you want a little extra room in your home gym, this rower is for you.
+      section.good-section.good-section-list__item
+        .good-section__inner
+          .good-section__media
+            picture.good-section__picture
+              img(src="/images/good-img-4.png", alt="Perfect for beginners & experienced warriors alike")
+          .good-section__content
+            ul.nav-good.good-section__nav
+              li.nav-good__item
+                a(href="#").nav-good__link Versatility
+              li.nav-good__item
+                a(href="#").nav-good__link Simple assembly
+              li.nav-good__item
+                a(href="#").nav-good__link Compact design
+              li.nav-good__item
+                a(href="#").nav-good__link.is-active Ease of use
+            .good-section__suptitle Ease of use
+            h2.good-section__title Perfect for beginners &&nbsp;experienced warriors alike
+            .content.good-section__text
+              p Whether you’ve been rowing for decades or are just starting out, Row Warrior offers easily customizable resistance levels so you can find the right challenge for you - wherever you are on your fitness journey.
+
+    .video-section
+      picture.video-section__bg
+        img(src="/images/video-bg-1.jpg", alt="Play video")
+      .container.video-section__container
+        button(type="button").js-video-modal-init.video-play-btn.video-section__btn
+          span.video-play-btn__title Play
+          span.video-play-btn__icon-wrap
+            svg.icon.video-play-btn__icon
+              use(xlink:href="/images/sprite.svg#video-play-btn-outline")
+          span.video-play-btn__title Video
+
+    .good-info-section-list
+      section.good-info-section.good-info-section-list__item
+        .good-info-section__media
+          picture.good-info-section__picture
+            img(src="/images/good-info-img-1.jpg", alt="Get a solid workout without the fuss")
+        .container.good-info-section__container
+          .good-info-section__inner
+            ul.nav-good.good-info-section__nav
+              li.nav-good__item
+                a(href="#").nav-good__link.is-active Simple
+              li.nav-good__item
+                a(href="#").nav-good__link Smart
+              li.nav-good__item
+                a(href="#").nav-good__link Solid
+            h2.good-info-section__title Get a solid workout without the fuss
+            .content.good-info-section__text
+              p The ultimate full body workout, Row Warrior delivers tangible results in minimal time, without complicated routines or loads of equipment. A simple 15 to 20 minute rowing session done 2 to 3 times a week will help you build strength, boost cardio, increase endurance, and torch fat.
+      section.good-info-section.good-info-section-list__item
+        .good-info-section__media
+          picture.good-info-section__picture
+            img(src="/images/good-info-img-2.jpg", alt="Track your stats & watch your gains")
+        .container.good-info-section__container
+          .good-info-section__inner
+            ul.nav-good.good-info-section__nav
+              li.nav-good__item
+                a(href="#").nav-good__link Simple
+              li.nav-good__item
+                a(href="#").nav-good__link.is-active Smart
+              li.nav-good__item
+                a(href="#").nav-good__link Solid
+            h2.good-info-section__title Track your stats &&nbsp;watch your gains
+            .content.good-info-section__text
+              p When it comes to staying motivated, there’s nothing more powerful than seeing your progress. With its built-in Bluetooth LED monitor, Row Warrior will help you track time, distance, row count, calories burned, heart rate, and more.
+      section.good-info-section.good-info-section-list__item
+        .good-info-section__media
+          picture.good-info-section__picture
+            img(src="/images/good-info-img-3.jpg", alt="Battle-tested & built to last")
+        .container.good-info-section__container
+          .good-info-section__inner
+            ul.nav-good.good-info-section__nav
+              li.nav-good__item
+                a(href="#").nav-good__link Simple
+              li.nav-good__item
+                a(href="#").nav-good__link Smart
+              li.nav-good__item
+                a(href="#").nav-good__link.is-active Solid
+            h2.good-info-section__title Battle-tested &&nbsp;built to last
+            .content.good-info-section__text
+              p Made with an industrial-grade steel frame that can handle weights of up to 550 pounds, Row Warrior sturdy design features wear-resistant surfaces that can withstand heavy use so it will look sleek and clean for years to come.
+
+    include includes/footer.pug
+
+include includes/foot.pug

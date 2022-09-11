@@ -1,0 +1,29 @@
+.info {
+    padding: 170px 0 240px;
+    position: relative;
+    z-index: 0;
+    &__contaier {
+    }
+    &__word {
+        margin: 0 0 170px;
+        white-space: nowrap;
+        &-card {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 168px;
+            text-transform: lowercase;
+            white-space: nowrap;
+            &:not(:last-child) {
+                margin-right: 150px;
+            }
+        }
+    }
+    &__title {
+        max-width: 770px;
+        margin: 0 auto;
+        font-weight: normal;
+        font-size: var(--fs-2);
+        line-height: 1.4;
+        text-align: center;
+    }
+}

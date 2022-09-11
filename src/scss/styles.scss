@@ -1,0 +1,17 @@
+@import "default/variables";
+@import "default/variables-css";
+@import "default/fonts";
+@import "default/interface";
+
+@import "blocks/components";
+@import "blocks/slick.min";
+@import "blocks/slick";
+
+@import "layouts/header";
+@import "layouts/main";
+@import "layouts/info";
+@import "layouts/good-section";
+@import "layouts/video-section";
+@import "layouts/good-info-section";
+
+@import "default/media";
