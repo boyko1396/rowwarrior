@@ -1,2 +1,43 @@
 footer.footer
-  .container.footer__container Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo sequi provident excepturi, unde nesciunt consequatur facere magni esse asperiores, minima labore? Repellat quibusdam fugit animi possimus at! Distinctio, velit molestias.
+  .container.footer__container
+    .footer__row
+      .footer__row-col.footer__row-col--logo
+        a(href="/").footer__logo
+          img(src="/images/logo-short.svg", alt="RowWarrior")
+        .footer__bottom
+          p.footer__copyright @Row Warrior 2022
+      .footer__row-col.footer__row-col--nav
+        .content.footer__description
+          p Warriors are more powerful when they work together. Don’t miss out on our exclusive workout videos, community highlights, product updates, and more.
+          p COME ROW WITH US.
+        .footer__bottom
+          .footer__menu
+            ul.footer__nav
+              li
+                a(href="#") Privacy policy
+              li
+                a(href="#") Terms
+              li
+                a(href="#") Contact
+            ul.sc-list.footer__sc-list
+              li.sc-list__item
+                a(href="#").sc-list__link
+                  svg.icon.sc-list__icon
+                    use(xlink:href="/images/sprite.svg#facebook")
+              li.sc-list__item
+                a(href="#").sc-list__link
+                  svg.icon.sc-list__icon
+                    use(xlink:href="/images/sprite.svg#instagram")
+              li.sc-list__item
+                a(href="#").sc-list__link
+                  svg.icon.sc-list__icon
+                    use(xlink:href="/images/sprite.svg#twitter")
+      .footer__row-col.footer__row-col--subscribe
+        .subscribe-block.footer__subscribe
+          .subscribe-block__title Get the good news
+          .subscribe-block__subtitle JOIN THE COMMUNITY OF WARRIORS
+          form(action="#").subscribe-form.subscribe-block__form
+            input(type="text", name="subscribe-email", placeholder="Email").subscribe-form__input
+            button(type="button").subscribe-form__btn
+              svg.icon.subscribe-form__btn-icon
+                use(xlink:href="/images/sprite.svg#arrow-btn-subscribe")

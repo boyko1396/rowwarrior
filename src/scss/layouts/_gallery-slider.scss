@@ -1,0 +1,11 @@
+.gallery-slider {
+    &__block {
+    }
+    &__block-slide {
+        vertical-align: top;
+    }
+    &__block-slide-media {
+        padding-bottom: 56%;
+        @extend .img-cover;
+    }
+}

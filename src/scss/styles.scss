@@ -4,14 +4,18 @@
 @import "default/interface";
 
 @import "blocks/components";
-@import "blocks/slick.min";
+@import "libs/slick.min";
 @import "blocks/slick";
 
 @import "layouts/header";
+@import "layouts/footer";
 @import "layouts/main";
 @import "layouts/info";
 @import "layouts/good-section";
 @import "layouts/video-section";
 @import "layouts/good-info-section";
+@import "layouts/appeal-section";
+@import "layouts/gallery-slider";
+@import "layouts/reviews-section";
 
 @import "default/media";

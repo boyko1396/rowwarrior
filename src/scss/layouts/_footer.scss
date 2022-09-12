@@ -1,0 +1,140 @@
+.footer {
+    background: $color-accent-2;
+    padding: 40px 0;
+    color: $color-white-1;
+    &__container {
+    }
+    &__row {
+        margin: 0 -10px;
+        display: flex;
+    }
+    &__row-col {
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        &--logo {
+            max-width: 13%;
+            flex: 0 0 13%;
+        }
+        &--nav {
+            flex-grow: 1;
+        }
+        &--subscribe {
+            max-width: 32%;
+            flex: 0 0 32%;
+        }
+    }
+    &__logo {
+        width: 100%;
+        max-width: 105px;
+        margin: 0 auto 20px 0;
+        font-size: 0;
+        display: inline-block;
+        vertical-align: top;
+        transition: all .4s;
+        &:hover {
+            text-decoration: none;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    &__bottom {
+        margin-top: auto;
+    }
+    &__copyright {
+        margin: 0 0 20px;
+        font-size: var(--fs-7);
+    }
+    &__description {
+        font-size: var(--fs-7);
+    }
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        font-size: var(--fs-7);
+        list-style-type: none;
+        li {
+            margin: 0 25px 0 0;
+            padding: 0;
+        }
+        a {
+            display: block;
+            transition: all .4s;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    &__sc-list {
+    }
+}
+
+.subscribe-block {
+    &__title {
+        margin: 0 0 5px;
+        font-weight: 500;
+        font-size: var(--fs-2);
+    }
+    &__subtitle {
+        margin: 0 0 20px;
+        font-size: var(--fs-7);
+    }
+    &__form {
+    }
+}
+
+.subscribe-form {
+    display: block;
+    position: relative;
+    &__input {
+        background: $color-white-1;
+        width: 100%;
+        padding: 30px 80px 30px 30px;
+        font-size: var(--fs-7);
+        line-height: 1.4;
+        display: block;
+        border: none;
+        border-radius: 30px;
+        outline: none;
+        transition: all .4s;
+    }
+    &__btn {
+        background: transparent;
+        height: 100%;
+        padding: 0 32px;
+        display: flex;
+        align-items: center;
+        font-size: 0;
+        color: $color-accent-2;
+        border: none;
+        border-radius: 0;
+        outline: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        transition: all .4s;
+        &-icon {
+            width: 24px;
+            height: 24px;
+            display: block;
+            flex: 0 0 24px;
+            transition: all .24s;
+            transition-property: transform;
+        }
+        &:hover &-icon {
+            @media (min-width: $lg-mf) {
+                transform: translateX(6px);
+            }
+        }
+    }
+}
