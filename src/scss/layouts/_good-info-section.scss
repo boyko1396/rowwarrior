@@ -27,9 +27,6 @@
     }
     &__nav {
         margin: 0 0 80px;
-        display: inline-flex;
-        box-shadow: inset 0 0 0 1px $color-white-1;
-        border-radius: 40px;
     }
     &__title {
         margin: 0 0 50px;
@@ -39,6 +36,7 @@
         text-transform: uppercase;
     }
     &__text {
+        font-size: var(--fs-6);
     }
 }
 

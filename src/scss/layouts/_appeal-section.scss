@@ -1,5 +1,6 @@
 .appeal-section {
-    padding: 180px 0;
+    background: $color-white-1;
+    padding: 180px 0 220px;
     position: relative;
     z-index: 0;
     &__img {
@@ -21,6 +22,7 @@
     &__title {
         margin: 0;
         white-space: nowrap;
+        transition: all .8s .6s;
         &:nth-child(1) {
         }
         &:nth-child(2) {
@@ -33,9 +35,20 @@
             font-size: 148px;
         }
         &--size-2 {
-            margin-top: 50px;
-            margin-bottom: 50px;
+            margin-top: 80px;
+            margin-bottom: 80px;
             font-size: 118px;
+        }
+    }
+    &.is-view &__title {
+        &:nth-child(1) {
+            transform: translateX(60px);
+        }
+        &:nth-child(2) {
+            transform: translateX(160px);
+        }
+        &:nth-child(3) {
+            transform: translateX(-140px);
         }
     }
 }

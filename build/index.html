@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/styles.css"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
 </html>
 <body>
@@ -16,25 +16,37 @@
       <div class="container header__container">
         <nav class="header-nav header__nav" role="navigation">
           <ul class="header-nav__list">
-            <li class="header-nav__item"><a class="header-nav__link" href="#">Shop</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#">Shop</a>
+              <ul class="header-nav__dropdown">
+                <li class="header-nav__dropdown-item">
+                  <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-1.png" alt="Black row warrior"/></picture><a class="header-nav__dropdown-link" href="#">Black row warrior</a>
+                </li>
+                <li class="header-nav__dropdown-item">
+                  <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-2.png" alt="Black row warrior"/></picture><a class="header-nav__dropdown-link" href="#">Black row warrior</a>
+                </li>
+                <li class="header-nav__dropdown-item">
+                  <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-3.png" alt="Black row warrior"/></picture><a class="header-nav__dropdown-link" href="#">Black row warrior</a>
+                </li>
+              </ul>
+            </li>
             <li class="header-nav__item"><a class="header-nav__link" href="#">About</a></li>
             <li class="header-nav__item"><a class="header-nav__link" href="#">Contact</a></li>
           </ul>
         </nav>
-        <div class="header__logo-wrap"><a class="header__logo" href="/"><img class="header__logo-img" src="/images/logo-long.svg" alt="RowWarrior"/></a></div>
+        <div class="header__logo-wrap"><a class="header__logo" href="/"><img class="header__logo-img" src="images/logo-long.svg" alt="RowWarrior"/></a></div>
         <div class="header__sc-list-wrap">
           <ul class="sc-list header__sc-list">
             <li class="sc-list__item"><a class="sc-list__link" href="#">
                 <svg class="icon sc-list__icon">
-                  <use xlink:href="/images/sprite.svg#facebook"></use>
+                  <use xlink:href="images/sprite.svg#facebook"></use>
                 </svg></a></li>
             <li class="sc-list__item"><a class="sc-list__link" href="#">
                 <svg class="icon sc-list__icon">
-                  <use xlink:href="/images/sprite.svg#instagram"></use>
+                  <use xlink:href="images/sprite.svg#instagram"></use>
                 </svg></a></li>
             <li class="sc-list__item"><a class="sc-list__link" href="#">
                 <svg class="icon sc-list__icon">
-                  <use xlink:href="/images/sprite.svg#twitter"></use>
+                  <use xlink:href="images/sprite.svg#twitter"></use>
                 </svg></a></li>
           </ul>
         </div>
@@ -44,7 +56,7 @@
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer__row">
-          <div class="footer__row-col footer__row-col--logo"><a class="footer__logo" href="/"><img src="/images/logo-short.svg" alt="RowWarrior"/></a>
+          <div class="footer__row-col footer__row-col--logo"><a class="footer__logo" href="/"><img src="images/logo-short.svg" alt="RowWarrior"/></a>
             <div class="footer__bottom">
               <p class="footer__copyright">@Row Warrior 2022</p>
             </div>
@@ -64,15 +76,15 @@
                 <ul class="sc-list footer__sc-list">
                   <li class="sc-list__item"><a class="sc-list__link" href="#">
                       <svg class="icon sc-list__icon">
-                        <use xlink:href="/images/sprite.svg#facebook"></use>
+                        <use xlink:href="images/sprite.svg#facebook"></use>
                       </svg></a></li>
                   <li class="sc-list__item"><a class="sc-list__link" href="#">
                       <svg class="icon sc-list__icon">
-                        <use xlink:href="/images/sprite.svg#instagram"></use>
+                        <use xlink:href="images/sprite.svg#instagram"></use>
                       </svg></a></li>
                   <li class="sc-list__item"><a class="sc-list__link" href="#">
                       <svg class="icon sc-list__icon">
-                        <use xlink:href="/images/sprite.svg#twitter"></use>
+                        <use xlink:href="images/sprite.svg#twitter"></use>
                       </svg></a></li>
                 </ul>
               </div>
@@ -86,7 +98,7 @@
                 <input class="subscribe-form__input" type="text" name="subscribe-email" placeholder="Email"/>
                 <button class="subscribe-form__btn" type="button">
                   <svg class="icon subscribe-form__btn-icon">
-                    <use xlink:href="/images/sprite.svg#arrow-btn-subscribe"></use>
+                    <use xlink:href="images/sprite.svg#arrow-btn-subscribe"></use>
                   </svg>
                 </button>
               </form>

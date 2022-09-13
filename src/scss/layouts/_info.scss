@@ -1,17 +1,22 @@
 .info {
-    padding: 170px 0 240px;
+    background: $color-white-1;
+    padding: 150px 0 200px;
     position: relative;
-    z-index: 0;
+    z-index: -1;
     &__contaier {
     }
     &__word {
         margin: 0 0 170px;
+        text-align: center;
         white-space: nowrap;
         &-card {
             display: inline-block;
             font-weight: bold;
             font-size: 168px;
+            color: $color-white-1;
+            text-shadow: -2px -2px 0 $color-accent-2, 2px -2px 0 $color-accent-2, -2px 2px 0 $color-accent-2, 2px 2px 0 $color-accent-2;
             text-transform: lowercase;
+            user-select: none;
             white-space: nowrap;
             &:not(:last-child) {
                 margin-right: 150px;

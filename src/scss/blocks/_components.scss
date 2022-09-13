@@ -74,20 +74,37 @@ svg,
     font-weight: 500;
     font-size: var(--fs-5);
     text-transform: uppercase;
+    letter-spacing: .04em;
     border: none;
     border-radius: 35px;
     outline: none;
     user-select: none;
     cursor: pointer;
-    transition: all .4s;
+    transition: all .34s;
     &:hover {
         text-decoration: none;
     }
-}
-
-.btn--theme-white {
-    background: $color-white-1;
-    color: $color-accent-1;
+    &--theme {
+        &-white {
+            background: $color-white-1;
+            color: $color-accent-1;
+            &:hover {
+                @media (min-width: $lg-mf) {
+                    background: $color-accent-1;
+                    color: $color-white-1;
+                }
+            }
+        }
+        &-accent {
+            background: $color-accent-2;
+            color: $color-white-1;
+            &:hover {
+                @media (min-width: $lg-mf) {
+                    background: $color-accent-7;
+                }
+            }
+        }
+    }
 }
 
 .video-play-btn {
@@ -123,26 +140,34 @@ svg,
         position: absolute;
         top: 0;
         left: 0;
+        transition: all .4s;
+        transition-property: opacity, visibility;
+    }
+    &:hover &__icon:nth-child(1),
+    &:not(:hover) &__icon:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
 .nav-good {
+    max-width: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: inline-flex;
     list-style-type: none;
+    box-shadow: inset 0 0 0 1px currentColor;
+    border-radius: 40px;
     &__item {
         margin: 0;
         padding: 0;
     }
     &__link {
-        padding: 19px;
         display: block;
-        font-size: var(--fs-6);
         line-height: 1;
-        color: $color-white-1;
         text-transform: uppercase;
         border-radius: 30px;
+        user-select: none;
         white-space: nowrap;
         transition: all .4s;
         &.is-active {
@@ -152,6 +177,28 @@ svg,
         &:hover {
             text-decoration: none;
         }
+    }
+    &--theme-white &__link {
+        color: $color-white-1;
+        &.is-active {
+            background: $color-white-1;
+            color: $color-accent-4;
+        }
+    }
+    &--theme-accent &__link {
+        color: $color-accent-2;
+        &.is-active {
+            background: $color-accent-2;
+            color: $color-white-1;
+        }
+    }
+    &--size-sm &__link {
+        padding: 15px;
+        font-size: var(--fs-14);
+    }
+    &--size-md &__link {
+        padding: 19px;
+        font-size: var(--fs-6);
     }
 }
 
@@ -171,5 +218,159 @@ svg,
 
 .rating-card {
     &--5 {
+    }
+}
+
+.subscribe-form {
+    display: block;
+    position: relative;
+    &__input {
+        background: $color-white-1;
+        width: 100%;
+        padding: 30px 80px 30px 30px;
+        font-size: var(--fs-7);
+        line-height: 1.4;
+        display: block;
+        border: none;
+        border-radius: 30px;
+        outline: none;
+        transition: all .4s;
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 0 2px $color-accent-4;
+        }
+        &::placeholder {
+            color: $color-accent-2;
+            transition: all .34s;
+            transition-property: color;
+        }
+        &:focus::placeholder,
+        &:hover::placeholder {
+            color: transparent;
+        }
+    }
+    &__btn {
+        background: transparent;
+        height: 100%;
+        padding: 0 32px;
+        display: flex;
+        align-items: center;
+        font-size: 0;
+        color: $color-accent-2;
+        border: none;
+        border-radius: 0;
+        outline: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        transition: all .4s;
+        &-icon {
+            width: 24px;
+            height: 24px;
+            display: block;
+            flex: 0 0 24px;
+            transition: all .24s;
+            transition-property: transform;
+        }
+        &:hover &-icon {
+            @media (min-width: $lg-mf) {
+                transform: translateX(10px);
+            }
+        }
+    }
+}
+
+.subscribe-block {
+    &__title {
+        margin: 0 0 5px;
+        font-weight: 500;
+        font-size: var(--fs-2);
+    }
+    &__subtitle {
+        margin: 0 0 20px;
+        font-size: var(--fs-7);
+    }
+    &__form {
+    }
+}
+
+.sc-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    &__item {
+        margin: 10px;
+        padding: 0;
+    }
+    &__link {
+        width: 46px;
+        height: 46px;
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: all .4s;
+        transition-property: color;
+        &:hover {
+            text-decoration: none;
+            @media (min-width: $lg-mf) {
+                color: $color-accent-1;
+                color: $color-accent-4;
+            }
+        }
+    }
+    &__icon {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+    }
+}
+
+.link-shadow {
+    box-shadow: inset 0 -1px 0 currentColor;
+    transition: all .4s;
+    transition-property: box-shadow;
+    &:hover {
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+            box-shadow: inset 0 -1px 0 transparent;
+        }
+    }
+}
+
+.link-hover-shadow {
+    box-shadow: inset 0 -1px 0 transparent;
+    transition: all .4s;
+    transition-property: box-shadow;
+    &:hover {
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+            box-shadow: inset 0 -1px 0 currentColor;
+        }
+    }
+}
+
+.table-info {
+    font-weight: 200;
+    font-size: var(--fs-12);
+    color: $color-gray-1;
+    border-collapse: collapse;
+    tr {
+    }
+    td {
+        padding: 30px;
+        vertical-align: top;
+        &:first-child {
+            padding-left: 90px;
+        }
+        &:last-child {
+            padding-right: 90px;
+        }
+    }
+    tr:not(:last-child) td {
+        border-bottom: 1px solid rgba($color-white-1, .48);
     }
 }

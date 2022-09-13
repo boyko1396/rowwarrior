@@ -19,21 +19,21 @@ body
           p.main__benefits-item Full body exercise
 
     section.info
-      .container.info__contaier
-        .info__word
+      .container.info__contaier.js-parallax-scene
+        .js-info-word.info__word
           .info__word-card Meet
           .info__word-card Row
           .info__word-card Warrior
         h2.info__title Your Home Gym Secret Weapon for Transforming Your Strength,&nbsp;Health, Body and Life.
 
-    .good-section-list
+    .good-section-list.reveal
       section.good-section.good-section-list__item
         .good-section__inner
           .good-section__media
             picture.good-section__picture
               img(src="/images/good-img-1.png", alt="Get a solid, low-impact, full-body workout at home")
           .good-section__content
-            ul.nav-good.good-section__nav
+            ul.nav-good.nav-good--size-md.nav-good--theme-white.good-section__nav
               li.nav-good__item
                 a(href="#").nav-good__link.is-active Versatility
               li.nav-good__item
@@ -52,7 +52,7 @@ body
             picture.good-section__picture
               img(src="/images/good-img-2.png", alt="Unbox, unwrap, assemble, and row")
           .good-section__content
-            ul.nav-good.good-section__nav
+            ul.nav-good.nav-good--size-md.nav-good--theme-white.good-section__nav
               li.nav-good__item
                 a(href="#").nav-good__link Versatility
               li.nav-good__item
@@ -71,7 +71,7 @@ body
             picture.good-section__picture
               img(src="/images/good-img-3.png", alt="No space? No problem")
           .good-section__content
-            ul.nav-good.good-section__nav
+            ul.nav-good.nav-good--size-md.nav-good--theme-white.good-section__nav
               li.nav-good__item
                 a(href="#").nav-good__link Versatility
               li.nav-good__item
@@ -90,7 +90,7 @@ body
             picture.good-section__picture
               img(src="/images/good-img-4.png", alt="Perfect for beginners & experienced warriors alike")
           .good-section__content
-            ul.nav-good.good-section__nav
+            ul.nav-good.nav-good--size-md.nav-good--theme-white.good-section__nav
               li.nav-good__item
                 a(href="#").nav-good__link Versatility
               li.nav-good__item
@@ -113,6 +113,8 @@ body
           span.video-play-btn__icon-wrap
             svg.icon.video-play-btn__icon
               use(xlink:href="/images/sprite.svg#video-play-btn-outline")
+            svg.icon.video-play-btn__icon
+              use(xlink:href="/images/sprite.svg#video-play-btn-fill")
           span.video-play-btn__title Video
 
     .good-info-section-list
@@ -122,7 +124,7 @@ body
             img(src="/images/good-info-img-1.jpg", alt="Get a solid workout without the fuss")
         .container.good-info-section__container
           .good-info-section__inner
-            ul.nav-good.good-info-section__nav
+            ul.nav-good.nav-good--size-md.nav-good--theme-white.good-info-section__nav
               li.nav-good__item
                 a(href="#").nav-good__link.is-active Simple
               li.nav-good__item
@@ -138,7 +140,7 @@ body
             img(src="/images/good-info-img-2.jpg", alt="Track your stats & watch your gains")
         .container.good-info-section__container
           .good-info-section__inner
-            ul.nav-good.good-info-section__nav
+            ul.nav-good.nav-good--size-md.nav-good--theme-white.good-info-section__nav
               li.nav-good__item
                 a(href="#").nav-good__link Simple
               li.nav-good__item
@@ -154,7 +156,7 @@ body
             img(src="/images/good-info-img-3.jpg", alt="Battle-tested & built to last")
         .container.good-info-section__container
           .good-info-section__inner
-            ul.nav-good.good-info-section__nav
+            ul.nav-good.nav-good--size-md.nav-good--theme-white.good-info-section__nav
               li.nav-good__item
                 a(href="#").nav-good__link Simple
               li.nav-good__item
@@ -165,7 +167,7 @@ body
             .content.good-info-section__text
               p Made with an industrial-grade steel frame that can handle weights of up to 550 pounds, Row Warrior sturdy design features wear-resistant surfaces that can withstand heavy use so it will look sleek and clean for years to come.
 
-    .appeal-section
+    section.appeal-section.section-four
       picture.appeal-section__img.appeal-section__img--1
         img(src="/images/appeal-img-1.png", alt="Build full body strength")
       picture.appeal-section__img.appeal-section__img--2
@@ -173,7 +175,7 @@ body
       .appeal-section__container
         h2.appeal-section__title.appeal-section__title--size-1 Build full body strength
         h2.appeal-section__title.appeal-section__title--size-2 Increase cardio & endurance
-        h2.appeal-section__title.appeal-section__title--size-1 Train like a warrior
+        h2.appeal-section__title.appeal-section__title--size-1.circle Train like a warrior
 
     .gallery-slider
       .js-gallery-slider-init.gallery-slider__block
@@ -184,7 +186,7 @@ body
           picture.gallery-slider__block-slide-media
             img(src="/images/video-slider-2.jpg", alt="Gallery photo 2")
 
-    .reviews-section
+    section.reviews-section
       .container.reviews-section__container
         h2.reviews-section__title Testimonials
         .content.reviews-section__description
@@ -220,6 +222,23 @@ body
                   .content.reviews-slider__slide-content
                     p I love this rowing machine! I was surprised how quickly it was delivered after I ordered it. Really a high quality piece of equipment. I feel like I should open a gym in my house now. It's that good!"
                   .reviews-slider__slide-name –Stacy
+
+    section.good-appeal
+      .container.good-appeal__container
+        .good-appeal__inner
+          .good-appeal__media
+            picture.good-appeal__picture
+              img(src="/images/good-appeal-img-1.png", alt="Train like a warrior, transform your life - and do it all without leaving your door")
+          .good-appeal__info
+            .good-appeal__content
+              ul.nav-good.nav-good--size-sm.nav-good--theme-accent.good-appeal__nav
+                li.nav-good__item
+                  a(href="#").nav-good__link Black
+                li.nav-good__item
+                  a(href="#").nav-good__link.is-active White
+              .good-appeal__suptitle Are you ready?
+              h2.good-appeal__title Train like a warrior, transform your life - and do it all without leaving your door
+              a(href="#").btn.btn--theme-accent.good-appeal__btn Let’s row
 
     include includes/footer.pug
 

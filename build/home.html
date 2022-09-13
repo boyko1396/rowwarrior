@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/styles.css"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
 </html>
 <body>
@@ -16,7 +16,19 @@
       <div class="container header__container">
         <nav class="header-nav header__nav" role="navigation">
           <ul class="header-nav__list">
-            <li class="header-nav__item"><a class="header-nav__link" href="#">Shop</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#">Shop</a>
+              <ul class="header-nav__dropdown">
+                <li class="header-nav__dropdown-item">
+                  <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-1.png" alt="Black row warrior"/></picture><a class="header-nav__dropdown-link" href="#">Black row warrior</a>
+                </li>
+                <li class="header-nav__dropdown-item">
+                  <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-2.png" alt="Black row warrior"/></picture><a class="header-nav__dropdown-link" href="#">Black row warrior</a>
+                </li>
+                <li class="header-nav__dropdown-item">
+                  <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-3.png" alt="Black row warrior"/></picture><a class="header-nav__dropdown-link" href="#">Black row warrior</a>
+                </li>
+              </ul>
+            </li>
             <li class="header-nav__item"><a class="header-nav__link" href="#">About</a></li>
             <li class="header-nav__item"><a class="header-nav__link" href="#">Contact</a></li>
           </ul>
@@ -55,8 +67,8 @@
       </div>
     </main>
     <section class="info">
-      <div class="container info__contaier">
-        <div class="info__word">
+      <div class="container info__contaier js-parallax-scene">
+        <div class="js-info-word info__word">
           <div class="info__word-card">Meet</div>
           <div class="info__word-card">Row</div>
           <div class="info__word-card">Warrior</div>
@@ -64,14 +76,14 @@
         <h2 class="info__title">Your Home Gym Secret Weapon for Transforming Your Strength,&nbsp;Health, Body and Life.</h2>
       </div>
     </section>
-    <div class="good-section-list">
+    <div class="good-section-list reveal">
       <section class="good-section good-section-list__item">
         <div class="good-section__inner">
           <div class="good-section__media">
             <picture class="good-section__picture"><img src="images/good-img-1.png" alt="Get a solid, low-impact, full-body workout at home"/></picture>
           </div>
           <div class="good-section__content">
-            <ul class="nav-good good-section__nav">
+            <ul class="nav-good nav-good--size-md nav-good--theme-white good-section__nav">
               <li class="nav-good__item"><a class="nav-good__link is-active" href="#">Versatility</a></li>
               <li class="nav-good__item"><a class="nav-good__link" href="#">Simple assembly</a></li>
               <li class="nav-good__item"><a class="nav-good__link" href="#">Compact design</a></li>
@@ -91,7 +103,7 @@
             <picture class="good-section__picture"><img src="images/good-img-2.png" alt="Unbox, unwrap, assemble, and row"/></picture>
           </div>
           <div class="good-section__content">
-            <ul class="nav-good good-section__nav">
+            <ul class="nav-good nav-good--size-md nav-good--theme-white good-section__nav">
               <li class="nav-good__item"><a class="nav-good__link" href="#">Versatility</a></li>
               <li class="nav-good__item"><a class="nav-good__link is-active" href="#">Simple assembly</a></li>
               <li class="nav-good__item"><a class="nav-good__link" href="#">Compact design</a></li>
@@ -111,7 +123,7 @@
             <picture class="good-section__picture"><img src="images/good-img-3.png" alt="No space? No problem"/></picture>
           </div>
           <div class="good-section__content">
-            <ul class="nav-good good-section__nav">
+            <ul class="nav-good nav-good--size-md nav-good--theme-white good-section__nav">
               <li class="nav-good__item"><a class="nav-good__link" href="#">Versatility</a></li>
               <li class="nav-good__item"><a class="nav-good__link" href="#">Simple assembly</a></li>
               <li class="nav-good__item"><a class="nav-good__link is-active" href="#">Compact design</a></li>
@@ -131,7 +143,7 @@
             <picture class="good-section__picture"><img src="images/good-img-4.png" alt="Perfect for beginners &amp; experienced warriors alike"/></picture>
           </div>
           <div class="good-section__content">
-            <ul class="nav-good good-section__nav">
+            <ul class="nav-good nav-good--size-md nav-good--theme-white good-section__nav">
               <li class="nav-good__item"><a class="nav-good__link" href="#">Versatility</a></li>
               <li class="nav-good__item"><a class="nav-good__link" href="#">Simple assembly</a></li>
               <li class="nav-good__item"><a class="nav-good__link" href="#">Compact design</a></li>
@@ -152,6 +164,9 @@
         <button class="js-video-modal-init video-play-btn video-section__btn" type="button"><span class="video-play-btn__title">Play</span><span class="video-play-btn__icon-wrap">
             <svg class="icon video-play-btn__icon">
               <use xlink:href="images/sprite.svg#video-play-btn-outline"></use>
+            </svg>
+            <svg class="icon video-play-btn__icon">
+              <use xlink:href="images/sprite.svg#video-play-btn-fill"></use>
             </svg></span><span class="video-play-btn__title">Video</span></button>
       </div>
     </div>
@@ -162,7 +177,7 @@
         </div>
         <div class="container good-info-section__container">
           <div class="good-info-section__inner">
-            <ul class="nav-good good-info-section__nav">
+            <ul class="nav-good nav-good--size-md nav-good--theme-white good-info-section__nav">
               <li class="nav-good__item"><a class="nav-good__link is-active" href="#">Simple</a></li>
               <li class="nav-good__item"><a class="nav-good__link" href="#">Smart</a></li>
               <li class="nav-good__item"><a class="nav-good__link" href="#">Solid</a></li>
@@ -180,7 +195,7 @@
         </div>
         <div class="container good-info-section__container">
           <div class="good-info-section__inner">
-            <ul class="nav-good good-info-section__nav">
+            <ul class="nav-good nav-good--size-md nav-good--theme-white good-info-section__nav">
               <li class="nav-good__item"><a class="nav-good__link" href="#">Simple</a></li>
               <li class="nav-good__item"><a class="nav-good__link is-active" href="#">Smart</a></li>
               <li class="nav-good__item"><a class="nav-good__link" href="#">Solid</a></li>
@@ -198,7 +213,7 @@
         </div>
         <div class="container good-info-section__container">
           <div class="good-info-section__inner">
-            <ul class="nav-good good-info-section__nav">
+            <ul class="nav-good nav-good--size-md nav-good--theme-white good-info-section__nav">
               <li class="nav-good__item"><a class="nav-good__link" href="#">Simple</a></li>
               <li class="nav-good__item"><a class="nav-good__link" href="#">Smart</a></li>
               <li class="nav-good__item"><a class="nav-good__link is-active" href="#">Solid</a></li>
@@ -211,15 +226,15 @@
         </div>
       </section>
     </div>
-    <div class="appeal-section">
+    <section class="appeal-section section-four">
       <picture class="appeal-section__img appeal-section__img--1"><img src="images/appeal-img-1.png" alt="Build full body strength"/></picture>
       <picture class="appeal-section__img appeal-section__img--2"><img src="images/appeal-img-2.png" alt="Train like a warrior"/></picture>
       <div class="appeal-section__container">
         <h2 class="appeal-section__title appeal-section__title--size-1">Build full body strength</h2>
         <h2 class="appeal-section__title appeal-section__title--size-2">Increase cardio & endurance</h2>
-        <h2 class="appeal-section__title appeal-section__title--size-1">Train like a warrior</h2>
+        <h2 class="appeal-section__title appeal-section__title--size-1 circle">Train like a warrior</h2>
       </div>
-    </div>
+    </section>
     <div class="gallery-slider">
       <div class="js-gallery-slider-init gallery-slider__block">
         <div class="gallery-slider__block-slide">
@@ -230,7 +245,7 @@
         </div>
       </div>
     </div>
-    <div class="reviews-section">
+    <section class="reviews-section">
       <div class="container reviews-section__container">
         <h2 class="reviews-section__title">Testimonials</h2>
         <div class="content reviews-section__description">
@@ -283,7 +298,26 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section class="good-appeal">
+      <div class="container good-appeal__container">
+        <div class="good-appeal__inner">
+          <div class="good-appeal__media">
+            <picture class="good-appeal__picture"><img src="images/good-appeal-img-1.png" alt="Train like a warrior, transform your life - and do it all without leaving your door"/></picture>
+          </div>
+          <div class="good-appeal__info">
+            <div class="good-appeal__content">
+              <ul class="nav-good nav-good--size-sm nav-good--theme-accent good-appeal__nav">
+                <li class="nav-good__item"><a class="nav-good__link" href="#">Black</a></li>
+                <li class="nav-good__item"><a class="nav-good__link is-active" href="#">White</a></li>
+              </ul>
+              <div class="good-appeal__suptitle">Are you ready?</div>
+              <h2 class="good-appeal__title">Train like a warrior, transform your life - and do it all without leaving your door</h2><a class="btn btn--theme-accent good-appeal__btn" href="#">Let’s row</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer__row">

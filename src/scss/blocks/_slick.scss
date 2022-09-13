@@ -20,6 +20,14 @@
     &:hover {
         text-decoration: none;
     }
+    &:before {
+        content: '';
+        position: absolute;
+        top: -26px;
+        right: -26px;
+        bottom: -26px;
+        left: -26px;
+    }
     &--prev {
         margin-left: 40px;
         left: 0;

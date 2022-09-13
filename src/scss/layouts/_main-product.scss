@@ -1,0 +1,38 @@
+.main-product {
+    background: $color-white-1;
+    padding-bottom: 56.25%;
+    color: $color-white-1;
+    position: relative;
+    z-index: 0;
+    &__bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        @extend .img-cover;
+    }
+    &__contaier {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__content {
+        max-width: 100%;
+        height: 100%;
+        padding: 160px 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+    }
+    &__title {
+        margin: 0 12.5% 0 0;
+        font-size: 100px;
+        line-height: .9;
+        text-transform: uppercase;
+    }
+}

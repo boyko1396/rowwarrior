@@ -1,0 +1,62 @@
+.good-appeal {
+    background: $color-white-1;
+    position: relative;
+    z-index: 0;
+    &:before {
+        background: url(../images/good-appeal-bg-1.png) center bottom no-repeat;
+        background-size: auto 100%;
+        width: 2180px;
+        height: 548px;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    &__container {
+    }
+    &__inner {
+        padding: 100px 0 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__media {
+        flex-grow: 1;
+    }
+    &__picture {
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    &__info {
+        max-width: 27%;
+        margin: 0 90px;
+        flex: 0 0 27%;
+    }
+    &__content {
+    }
+    &__nav {
+        margin: 0 0 50px;
+    }
+    &__suptitle {
+        margin: 0 0 20px;
+        font-weight: 600;
+        font-size: var(--fs-11);
+        color: $color-accent-2;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+    }
+    &__title {
+        margin: 0 0 40px;
+        font-weight: 300;
+        font-size: var(--fs-3);
+        line-height: 1.4;
+        text-transform: uppercase;
+    }
+    &__btn {
+    }
+}
