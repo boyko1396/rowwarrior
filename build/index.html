@@ -14,23 +14,38 @@
   <div id="site">
     <header class="header">
       <div class="container header__container">
+        <button class="js-header-nav-mobile-btn header__toggle" type="button"><span></span><span></span><span></span></button>
         <nav class="header-nav header__nav" role="navigation">
           <ul class="header-nav__list">
-            <li class="header-nav__item"><a class="header-nav__link" href="#">Shop</a>
+            <li class="header-nav__item"><a class="js-header-nav-link-dropdown header-nav__link header-nav__link--dropdown" href="#">Shop</a>
               <ul class="header-nav__dropdown">
                 <li class="header-nav__dropdown-item">
                   <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-1.png" alt="Black row warrior"/></picture><a class="header-nav__dropdown-link" href="#">Black row warrior</a>
                 </li>
                 <li class="header-nav__dropdown-item">
-                  <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-2.png" alt="Black row warrior"/></picture><a class="header-nav__dropdown-link" href="#">Black row warrior</a>
+                  <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-2.png" alt="White row warrior"/></picture><a class="header-nav__dropdown-link" href="#">White row warrior</a>
                 </li>
                 <li class="header-nav__dropdown-item">
-                  <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-3.png" alt="Black row warrior"/></picture><a class="header-nav__dropdown-link" href="#">Black row warrior</a>
+                  <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-3.png" alt="Merch"/></picture><a class="header-nav__dropdown-link" href="#">Merch</a>
                 </li>
               </ul>
             </li>
             <li class="header-nav__item"><a class="header-nav__link" href="#">About</a></li>
             <li class="header-nav__item"><a class="header-nav__link" href="#">Contact</a></li>
+          </ul>
+          <ul class="sc-list header-nav__sc-list">
+            <li class="sc-list__item"><a class="sc-list__link" href="#">
+                <svg class="icon sc-list__icon">
+                  <use xlink:href="images/sprite.svg#facebook"></use>
+                </svg></a></li>
+            <li class="sc-list__item"><a class="sc-list__link" href="#">
+                <svg class="icon sc-list__icon">
+                  <use xlink:href="images/sprite.svg#instagram"></use>
+                </svg></a></li>
+            <li class="sc-list__item"><a class="sc-list__link" href="#">
+                <svg class="icon sc-list__icon">
+                  <use xlink:href="images/sprite.svg#twitter"></use>
+                </svg></a></li>
           </ul>
         </nav>
         <div class="header__logo-wrap"><a class="header__logo" href="/"><img class="header__logo-img" src="images/logo-long.svg" alt="RowWarrior"/></a></div>
@@ -58,7 +73,7 @@
         <div class="footer__row">
           <div class="footer__row-col footer__row-col--logo"><a class="footer__logo" href="/"><img src="images/logo-short.svg" alt="RowWarrior"/></a>
             <div class="footer__bottom">
-              <p class="footer__copyright">@Row Warrior 2022</p>
+              <p class="d-sm-none footer__copyright">@Row Warrior 2022</p>
             </div>
           </div>
           <div class="footer__row-col footer__row-col--nav">
@@ -73,6 +88,7 @@
                   <li><a href="#">Terms</a></li>
                   <li><a href="#">Contact</a></li>
                 </ul>
+                <p class="d-sm-block footer__copyright">@Row Warrior 2022</p>
                 <ul class="sc-list footer__sc-list">
                   <li class="sc-list__item"><a class="sc-list__link" href="#">
                       <svg class="icon sc-list__icon">
@@ -110,5 +126,9 @@
   </div>
 </body>
 <script src="js/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/main.js"></script>

@@ -1,6 +1,7 @@
 .main-product {
     background: $color-white-1;
-    padding-bottom: 56.25%;
+    height: 100vh;
+    min-height: 560px;
     color: $color-white-1;
     position: relative;
     z-index: 0;
@@ -28,11 +29,18 @@
         justify-content: flex-end;
         align-items: center;
         text-align: center;
+        @media (max-width: $lg) {
+            justify-content: center;
+        }
     }
     &__title {
         margin: 0 12.5% 0 0;
         font-size: 100px;
         line-height: .9;
         text-transform: uppercase;
+        @media (max-width: $lg) {
+            margin-right: 0;
+            font-size: var(--fs-1);
+        }
     }
 }

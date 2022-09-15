@@ -1,18 +1,30 @@
 .product-technical {
     background: $color-accent-8;
-    padding: 100px 0 80px;
+    padding: 12rem 0 8rem;
     color: $color-white-1;
+    @media (max-width: $lg) {
+        padding: 60px 0 30px;
+    }
     &__container {
     }
     &__title {
-        margin: 0 0 70px;
+        margin: 0 0 7rem;
         font-weight: normal;
         font-size: var(--fs-2);
         text-align: center;
         text-transform: uppercase;
+        @media (max-width: $lg) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: $md) {
+            font-size: 30px;
+        }
     }
     &__table {
         width: 75%;
         margin: 0 auto;
+        @media (max-width: $lg) {
+            width: 100%;
+        }
     }
 }

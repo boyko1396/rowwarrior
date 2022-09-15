@@ -1,60 +1,126 @@
 .product-info-card-list {
+    padding-bottom: 80px;
+    @media (max-width: $lg) {
+        padding-bottom: 40px;
+    }
 }
 
 .product-info-card {
+    padding: 100px 0;
+    @media (max-width: $lg) {
+        padding: 40px 0;
+    }
     &__container {
         display: flex;
         align-items: center;
+        @media (max-width: $lg) {
+            flex-wrap: wrap;
+        }
     }
     &__media {
         flex-grow: 1;
         pointer-events: none;
         user-select: none;
+        @media (max-width: $lg) {
+            max-width: 100%;
+            margin: 0 0 25px;
+            flex: 0 0 100%;
+        }
     }
     &__picture {
+        margin: -150px 0;
+        @media (max-width: $lg) {
+            margin: 0 -50px !important;
+        }
         img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
             display: block;
         }
     }
     &:nth-child(odd) &__picture {
         margin-left: -28%;
+        @media (max-width: $lg) {
+            margin-left: 0;
+        }
     }
     &:nth-child(even) &__picture {
         margin-right: -28%;
+        @media (max-width: $lg) {
+            margin-right: 0;
+        }
     }
     &__aside {
-        max-width: 37.5%;
-        flex: 0 0 37.5%;
+        max-width: 40%;
+        margin-left: -2.5%;
+        flex: 0 0 40%;
+        @media (max-width: $lg) {
+            max-width: 100%;
+            margin-left: 0;
+            flex-basis: 100%;
+        }
     }
     &:nth-child(even) &__aside {
-        order: -1;
+        @media (min-width: $lg-mf) {
+            order: -1;
+        }
     }
     &__content {
+        @media (max-width: $lg) {
+            text-align: center;
+        }
         &-suptitle {
-            margin: 0 0 20px;
+            margin: 0 0 25px;
             font-weight: 600;
             font-size: var(--fs-11);
             text-transform: uppercase;
             letter-spacing: .16em;
+            @media (max-width: $md) {
+                margin-bottom: 15px;
+            }
         }
         &-title {
             margin: 0 0 30px;
             font-weight: 300;
             font-size: var(--fs-10);
+            @media (max-width: $md) {
+                font-size: 30px;
+            }
         }
         &-text {
             font-weight: 300;
             font-size: var(--fs-8);
+            @media (max-width: $md) {
+                font-size: 20px;
+            }
         }
     }
     &:nth-child(odd) &__content {
         margin: 0 30px;
+        padding-right: 5%;
         padding-left: 18%;
+        @media (max-width: 1600px) {
+            margin-left: 15px;
+            padding-right: 0;
+            padding-left: 6%;
+        }
+        @media (max-width: $lg) {
+            margin: 0;
+            padding: 0;
+        }
     }
     &:nth-child(even) &__content {
         margin: 0 30px;
         padding-right: 18%;
+        padding-left: 5%;
+        @media (max-width: 1600px) {
+            margin-right: 15px;
+            padding-right: 6%;
+            padding-left: 0;
+        }
+        @media (max-width: $lg) {
+            margin: 0;
+            padding: 0;
+        }
     }
 }

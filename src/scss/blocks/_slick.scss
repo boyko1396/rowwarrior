@@ -7,7 +7,6 @@
     display: flex;
     align-items: center;
     font-size: 0;
-    color: $color-accent-2;
     text-align: center;
     border-radius: 0;
     border: none;
@@ -19,6 +18,12 @@
     z-index: 1;
     &:hover {
         text-decoration: none;
+    }
+    &--theme-accent {
+        color: $color-accent-2;
+    }
+    &--theme-accent-light {
+        color: $color-accent-6;
     }
     &:before {
         content: '';
@@ -40,6 +45,11 @@
         width: 90px;
         height: 90px;
         margin-top: -45px;
+        @media (max-width: $md) {
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+        }
     }
     &--size-md {
         width: 50px;
@@ -57,17 +67,53 @@
         margin-right: auto;
     }
     &--prev:hover &__icon-wrap {
-        transform: translateX(-14px);
+        @media (min-width: $lg-mf) {
+            transform: translateX(-14px);
+        }
     }
     &--next &__icon-wrap  {
         margin-left: auto;
     }
     &--next:hover &__icon-wrap {
-        transform: translateX(14px);
+        @media (min-width: $lg-mf) {
+            transform: translateX(14px);
+        }
     }
     &__icon {
         width: 100%;
         height: 100%;
         display: block;
+    }
+}
+
+.slick-dots {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    li {
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+        padding: 0;
+        position: relative;
+        button {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid $color-accent-2;
+            border-radius: 50%;
+            transition: all .4s;
+            transition-property: background;
+            @extend .area-click, .btn-reset;
+        }
+        &.slick-active button {
+            background: $color-accent-2;
+        }
     }
 }

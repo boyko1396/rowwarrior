@@ -1,6 +1,6 @@
 .good-info-section {
     background: $color-accent-4;
-    color: $color-white-1;
+    color: $color-gray-1;
     position: relative;
     z-index: 0;
     &__media {
@@ -9,34 +9,82 @@
         position: absolute;
         top: 0;
         left: 0;
+        overflow: hidden;
         z-index: -1;
+        @media (max-width: $lg) {
+            height: auto;
+            padding-bottom: 50%;
+            position: relative;
+        }
     }
     &__picture {
         height: 100%;
         @extend .img-cover;
+        @media (max-width: $lg) {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
         img {
         }
     }
     &__container {
+        height: 100vh;
+        min-height: 640px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width: $lg) {
+            height: initial;
+            min-height: initial;
+            display: block;
+        }
     }
     &__inner {
+        width: 100%;
         max-width: 700px;
         margin: 0 auto;
-        padding: 150px 60px;
+        padding: 120px 60px 60px;
         text-align: center;
+        @media (max-width: $lg) {
+            max-width: 100%;
+            padding: 40px 20px;
+        }
     }
     &__nav {
-        margin: 0 0 80px;
+        margin: 0 0 60px;
+        @media (max-width: $lg) {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
     }
     &__title {
-        margin: 0 0 50px;
+        margin: 0 0 30px;
         font-weight: normal;
         font-size: var(--fs-2);
         line-height: 1.4;
         text-transform: uppercase;
+        @media (max-width: $lg) {
+            max-width: 580px;
+            margin: 0 auto 40px;
+            font-size: 40px;
+        }
+        @media (max-width: $md) {
+            margin-bottom: 30px;
+            font-size: 35px;
+        }
     }
     &__text {
         font-size: var(--fs-6);
+        @media (max-width: $lg) {
+            font-size: 24px;
+        }
+        @media (max-width: $md) {
+            max-width: 90%;
+            margin: 0 auto;
+            font-size: 18px;
+        }
     }
 }
 

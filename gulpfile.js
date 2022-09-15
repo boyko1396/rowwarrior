@@ -81,6 +81,15 @@ const images = () => {
 }
 exports.images = images;
 
+// media  
+const media = () => {
+	return gulp.src("src/media/*")
+		.pipe(sourcemap.init())
+		.pipe(gulp.dest("build/media/"))
+		.pipe(sync.stream());
+}
+exports.media = media;
+
 // JS 
 const scripts = () => {
 	return gulp.src("src/js/*")
@@ -116,8 +125,9 @@ exports.server = server;
 // watcher
 const watch = () => {
 	gulp.watch('src/js/*', gulp.series("scripts"));
-	gulp.watch('src/images/**', gulp.series("images"));
+	gulp.watch('src/images/*', gulp.series("images"));
 	gulp.watch('src/fonts/*', gulp.series("fonts"));
+	gulp.watch('src/media/**', gulp.series("media"));
 	gulp.watch('src/scss/**/*.+(sass|scss)', gulp.series("createCss"));
 	gulp.watch('src/scss/libs/*.css)', gulp.series("moveCss"));
 	gulp.watch('src/**/*.pug', gulp.series("buildTemplate"));
@@ -130,7 +140,7 @@ exports.watch = watch;
 
 // gulp build/default
 exports.default = gulp.series(
-	buildTemplate, buildLoad, createCss, moveCss, scripts, images, fonts, server, watch
+	buildTemplate, buildLoad, createCss, moveCss, media, scripts, images, fonts, server, watch
 );
 // gulp develop
 exports.dev = gulp.series(

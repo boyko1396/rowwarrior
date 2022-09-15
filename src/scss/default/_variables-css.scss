@@ -16,4 +16,11 @@
     --fs-14: 16px;
 
     --gap: 44px;
+    @media (max-width: $lg) {
+        --fs-1: 58px;
+        --fs-5: 24px;
+    }
+    @media (max-width: $sm) {
+        --gap: 20px;
+    }
 }

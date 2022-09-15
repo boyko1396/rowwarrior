@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>RowWarrior</title>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/styles.css"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+</html>
+<body>
+  <div id="root">
+    <header class="header">
+      <div class="container header__container">
+        <button class="js-header-nav-mobile-btn header__toggle" type="button"><span></span><span></span><span></span></button>
+        <nav class="header-nav header__nav" role="navigation">
+          <ul class="header-nav__list">
+            <li class="header-nav__item"><a class="js-header-nav-link-dropdown header-nav__link header-nav__link--dropdown" href="#">Shop</a>
+              <ul class="header-nav__dropdown">
+                <li class="header-nav__dropdown-item">
+                  <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-1.png" alt="Black row warrior"/></picture><a class="header-nav__dropdown-link" href="#">Black row warrior</a>
+                </li>
+                <li class="header-nav__dropdown-item">
+                  <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-2.png" alt="White row warrior"/></picture><a class="header-nav__dropdown-link" href="#">White row warrior</a>
+                </li>
+                <li class="header-nav__dropdown-item">
+                  <picture class="header-nav__dropdown-picture"><img src="images/header-nav-img-3.png" alt="Merch"/></picture><a class="header-nav__dropdown-link" href="#">Merch</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#">About</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#">Contact</a></li>
+          </ul>
+          <ul class="sc-list header-nav__sc-list">
+            <li class="sc-list__item"><a class="sc-list__link" href="#">
+                <svg class="icon sc-list__icon">
+                  <use xlink:href="images/sprite.svg#facebook"></use>
+                </svg></a></li>
+            <li class="sc-list__item"><a class="sc-list__link" href="#">
+                <svg class="icon sc-list__icon">
+                  <use xlink:href="images/sprite.svg#instagram"></use>
+                </svg></a></li>
+            <li class="sc-list__item"><a class="sc-list__link" href="#">
+                <svg class="icon sc-list__icon">
+                  <use xlink:href="images/sprite.svg#twitter"></use>
+                </svg></a></li>
+          </ul>
+        </nav>
+        <div class="header__logo-wrap"><a class="header__logo" href="/"><img class="header__logo-img" src="images/logo-long.svg" alt="RowWarrior"/></a></div>
+        <div class="header__sc-list-wrap">
+          <ul class="sc-list header__sc-list">
+            <li class="sc-list__item"><a class="sc-list__link" href="#">
+                <svg class="icon sc-list__icon">
+                  <use xlink:href="images/sprite.svg#facebook"></use>
+                </svg></a></li>
+            <li class="sc-list__item"><a class="sc-list__link" href="#">
+                <svg class="icon sc-list__icon">
+                  <use xlink:href="images/sprite.svg#instagram"></use>
+                </svg></a></li>
+            <li class="sc-list__item"><a class="sc-list__link" href="#">
+                <svg class="icon sc-list__icon">
+                  <use xlink:href="images/sprite.svg#twitter"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="main-product" role="main">
+      <picture class="main-product__bg"><img src="images/main-img-1.jpg" alt="Unleash your inner warrior"/></picture>
+      <div class="container main-product__contaier">
+        <div class="main-product__content">
+          <h1 class="main-product__title">Unleash<br>your inner<br>warrior</h1>
+        </div>
+      </div>
+    </main>
+    <section class="product-section">
+      <div class="container product-section__container">
+        <div class="d-lg-block product-section__header">
+          <h2 class="product-content__title">Row warrior</h2>
+          <ul class="nav-good nav-good--size-sm nav-good--theme-accent product-content__nav">
+            <li class="nav-good__item"><a class="nav-good__link is-active" href="#">Black</a></li>
+            <li class="nav-good__item"><a class="nav-good__link" href="#">White</a></li>
+          </ul>
+        </div>
+        <div class="product-section__inner">
+          <div class="product-section__media">
+            <div class="js-product-slider-init product-slider product-section__media-main">
+              <div class="product-slider__slide">
+                <picture class="product-slider__slide-picture"><img src="images/product-slider-black-1.jpg" alt="Product 1"/></picture>
+              </div>
+              <div class="product-slider__slide">
+                <picture class="product-slider__slide-picture"><img src="images/product-slider-black-2.jpg" alt="Product 2"/></picture>
+              </div>
+              <div class="product-slider__slide">
+                <picture class="product-slider__slide-picture"><img src="images/product-slider-black-3.jpg" alt="Product 3"/></picture>
+              </div>
+              <div class="product-slider__slide">
+                <picture class="product-slider__slide-picture"><img src="images/product-slider-black-4.jpg" alt="Product 4"/></picture>
+              </div>
+              <div class="product-slider__slide">
+                <picture class="product-slider__slide-picture"><img src="images/product-slider-black-5.jpg" alt="Product 5"/></picture>
+              </div>
+            </div>
+            <div class="product-nav-slider product-section__media-nav">
+              <div class="js-product-nav-slider-init product-nav-slider__block">
+                <div class="product-nav-slider__slide">
+                  <div class="product-nav-slider__slide-picture"><img src="images/product-slider-black-1.jpg" alt="Product 1"/></div>
+                </div>
+                <div class="product-nav-slider__slide">
+                  <div class="product-nav-slider__slide-picture"><img src="images/product-slider-black-2.jpg" alt="Product 2"/></div>
+                </div>
+                <div class="product-nav-slider__slide">
+                  <div class="product-nav-slider__slide-picture"><img src="images/product-slider-black-3.jpg" alt="Product 3"/></div>
+                </div>
+                <div class="product-nav-slider__slide">
+                  <div class="product-nav-slider__slide-picture"><img src="images/product-slider-black-4.jpg" alt="Product 4"/></div>
+                </div>
+                <div class="product-nav-slider__slide">
+                  <div class="product-nav-slider__slide-picture"><img src="images/product-slider-black-5.jpg" alt="Product 5"/></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-section__content">
+            <div class="product-content product-section__content-inner">
+              <h2 class="d-lg-none product-content__title">Row warrior</h2>
+              <ul class="d-lg-none nav-good nav-good--size-sm nav-good--theme-accent product-content__nav">
+                <li class="nav-good__item"><a class="nav-good__link is-active" href="#">Black</a></li>
+                <li class="nav-good__item"><a class="nav-good__link" href="#">White</a></li>
+              </ul>
+              <h3 class="product-content__subtitle">In stock — ready to ship</h3>
+              <div class="content product-content__text">
+                <p>Capture the powerful sensation of rowing through open water, and experience how exercise is meant to feel—not just in your body, but in your mind and spirit. This machine is engineered to withstand your toughest workouts, yet artfully designed for simple, streamlined storage.</p>
+                <p>There’s no time like right now for unleashing your inner warrior.</p>
+                <p>Life is a battle, and victory is yours.</p>
+              </div><a class="btn btn--theme-accent product-content__btn" href="#">Let’s row</a><a class="product-content__link-moore" href="#">Technical info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product-appeal">
+      <picture class="product-appeal__bg"><img src="images/product-appeal-img-1.jpg" alt="Train like a warrior &amp; transform your life"/></picture>
+      <div class="container product-appeal__container">
+        <div class="product-appeal__col">
+          <h2 class="product-appeal__title">Train like a&nbsp;warrior</h2>
+        </div>
+        <div class="product-appeal__col">
+          <h2 class="product-appeal__title">Transform your life</h2>
+        </div>
+      </div>
+    </section>
+    <section class="product-benefits">
+      <div class="container product-benefits__container">
+        <div class="content product-benefits__description">
+          <p>Row Warrior provides a solid, full-body, low-impact workout that delivers incredible results with just 15 to 20 minutes completed 2 to 3 times a week, right in the convenience of your own home.</p>
+          <p>Get ready to watch your body and life transform:</p>
+        </div>
+        <div class="product-benefits__list">
+          <div class="product-benefits__list-col">
+            <article class="product-benefits-card product-benefits__list-card">
+              <h3 class="product-benefits-card__title">Get stronger</h3>
+              <div class="content product-benefits-card__text">
+                <p>Row Warrior activates major muscle groups in the lower body, upper body, and core so you can build muscle and increase strength everywhere all at once.</p>
+              </div>
+            </article>
+          </div>
+          <div class="product-benefits__list-col">
+            <article class="product-benefits-card product-benefits__list-card">
+              <h3 class="product-benefits-card__title">Kick up your cardio</h3>
+              <div class="content product-benefits-card__text">
+                <p>Nothing gets your heart pumping quite like a good rowing sesh. When your cardiovascular performance improves, so does your fitness level.</p>
+              </div><a class="btn btn--theme-accent product-benefits-card__btn" href="#">Let’s row</a>
+            </article>
+          </div>
+          <div class="product-benefits__list-col">
+            <article class="product-benefits-card product-benefits__list-card">
+              <h3 class="product-benefits-card__title">Increase endurance</h3>
+              <div class="content product-benefits-card__text">
+                <p>Whether you want to go longer, work harder, or perform athletically for longer periods of time, Row Warrior is the tool to help you get there.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product-appeal">
+      <picture class="product-appeal__bg"><img src="images/product-appeal-img-2.jpg" alt="Gym-quality durability &amp; at-home versatility"/></picture>
+      <div class="container product-appeal__container">
+        <div class="product-appeal__col">
+          <h2 class="product-appeal__title">Gym-quality durability</h2>
+        </div>
+        <div class="product-appeal__col">
+          <h2 class="product-appeal__title">At-home versatility</h2>
+        </div>
+      </div>
+    </section>
+    <section class="product-benefits">
+      <div class="container product-benefits__container">
+        <div class="content product-benefits__description">
+          <p>You don’t need complicated machinery to get amazing results. Row Warrior is built to last with sturdy construction, sleek design, and straight forward, no-fuss assembly.</p>
+          <p>Tap into your inner warrior any time right at home.</p>
+        </div>
+        <div class="product-benefits__list">
+          <div class="product-benefits__list-col">
+            <article class="product-benefits-card product-benefits__list-card">
+              <h3 class="product-benefits-card__title">Simple assembly</h3>
+              <div class="content product-benefits-card__text">
+                <p>When Row Warrior arrives at your door, you’ll be able to unbox, assemble, and get rowing in 30 minutes or less.</p>
+              </div>
+            </article>
+          </div>
+          <div class="product-benefits__list-col">
+            <article class="product-benefits-card product-benefits__list-card">
+              <h3 class="product-benefits-card__title">Compact design</h3>
+              <div class="content product-benefits-card__text">
+                <p>Featuring a sleek, simple, compact design, Row Warrior can easily be folded, separated, and stored away.</p>
+              </div><a class="btn btn--theme-accent product-benefits-card__btn" href="#">Let’s row</a>
+            </article>
+          </div>
+          <div class="product-benefits__list-col">
+            <article class="product-benefits-card product-benefits__list-card">
+              <h3 class="product-benefits-card__title">Ease of use</h3>
+              <div class="content product-benefits-card__text">
+                <p>With its intuitive design & customizable resistance levels, it’s a simple way to get a&nbsp;solid workout.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="product-info-card-list">
+      <section class="product-info-card">
+        <div class="container product-info-card__container">
+          <div class="product-info-card__media">
+            <picture class="product-info-card__picture"><img src="images/product-info-card-1.jpg" alt="Get Maximum Results in Minimal Time"/></picture>
+          </div>
+          <div class="product-info-card__aside">
+            <div class="product-info-card__content">
+              <div class="product-info-card__content-suptitle">Full-body</div>
+              <h2 class="product-info-card__content-title">Get Maximum Results in&nbsp;Minimal&nbsp;Time</h2>
+              <div class="content product-info-card__content-text">
+                <p>When you’re working muscles all over your body at the same time, you don’t have to spend hours exercising. Since Row Warrior provides a full body workout in one simple motion, you’ll maximize your results from your time spent working out.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="product-info-card">
+        <div class="container product-info-card__container">
+          <div class="product-info-card__media">
+            <picture class="product-info-card__picture"><img src="images/product-info-card-2.jpg" alt="Increase Strength &amp; Cardio, Without the Damage"/></picture>
+          </div>
+          <div class="product-info-card__aside">
+            <div class="product-info-card__content">
+              <div class="product-info-card__content-suptitle">Low-impact</div>
+              <h2 class="product-info-card__content-title">Increase Strength & Cardio, Without the Damage</h2>
+              <div class="content product-info-card__content-text">
+                <p>Running, sports, HIIT workouts, and power lifting are all great ways to increase strength and cardio, but the problem is, they’re tough on your bones and joints. Row Warrior delivers all the same benefits without the damage of high impact workouts. Use it to support your higher impact endeavors, or as a standalone workout.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="product-technical">
+      <div class="container product-technical__container">
+        <div class="product-technical__title">Technical info</div>
+        <table class="table-info product-technical__table">
+          <tbody>
+            <tr>
+              <td>Resistance Mechanism</td>
+              <td>Magnetic, Air</td>
+            </tr>
+            <tr>
+              <td>Product Dimensions</td>
+              <td>27"D x 14"W x 12"H</td>
+            </tr>
+            <tr>
+              <td>Maximum Weight Recommendation</td>
+              <td>550 Pounds</td>
+            </tr>
+            <tr>
+              <td>Frame Material</td>
+              <td>Alloy Steel</td>
+            </tr>
+            <tr>
+              <td>Item Weight</td>
+              <td>34.47 Kilograms</td>
+            </tr>
+            <tr>
+              <td>Item Dimensions LxWxH</td>
+              <td>27 x 14 x 12 inches</td>
+            </tr>
+            <tr>
+              <td>Number of Batteries</td>
+              <td>4 AA batteries required</td>
+            </tr>
+            <tr>
+              <td>Display Type</td>
+              <td>LCD</td>
+            </tr>
+            <tr>
+              <td>Item Package Dimensions LxWxH</td>
+              <td>57 x 23 x 17 inches</td>
+            </tr>
+            <tr>
+              <td>Package Weight</td>
+              <td>34.47 Kilograms</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="product-advantage">
+      <div class="container product-advantage__container">
+        <div class="product-advantage__inner">
+          <div class="product-advantage__media">
+            <div class="product-advantage__media-list">
+              <div class="product-advantage__media-list-col product-advantage__media-list-col--1">
+                <picture class="product-advantage__img"><img src="images/product-advantage-img-1.jpg" alt=""/></picture>
+              </div>
+              <div class="product-advantage__media-list-col product-advantage__media-list-col--2">
+                <picture class="product-advantage__img"><img src="images/product-advantage-img-2.jpg" alt=""/></picture>
+              </div>
+              <div class="product-advantage__media-list-col product-advantage__media-list-col--3">
+                <picture class="product-advantage__img"><img src="images/product-advantage-img-3.jpg" alt=""/></picture>
+              </div>
+              <div class="product-advantage__media-list-col product-advantage__media-list-col--4">
+                <picture class="product-advantage__img"><img src="images/product-advantage-img-4.jpg" alt=""/></picture>
+              </div>
+            </div>
+          </div>
+          <div class="product-advantage__aside">
+            <h2 class="product-advantage__aside-title">Everything you need to&nbsp;train like a warrior right at home:</h2>
+            <div class="product-advantage__aside-list">
+              <article class="product-advantage-card product-advantage__aside-list-card">
+                <div class="product-advantage-card__media">
+                  <picture class="product-advantage-card__img"><img src="images/product-advantage-card-1.png" alt="Adjustable Resistance Levels"/></picture>
+                </div>
+                <div class="product-advantage-card__content">
+                  <h3 class="product-advantage-card__title">Adjustable Resistance Levels</h3>
+                  <div class="content product-advantage-card__text">
+                    <p>With 10 different resistance levels, you’ll find the perfect challenge everytime you row.</p>
+                  </div>
+                </div>
+              </article>
+              <article class="product-advantage-card product-advantage__aside-list-card">
+                <div class="product-advantage-card__media">
+                  <picture class="product-advantage-card__img"><img src="images/product-advantage-card-2.png" alt="Enhanced LED Monitor with Tracking"/></picture>
+                </div>
+                <div class="product-advantage-card__content">
+                  <h3 class="product-advantage-card__title">Enhanced LED Monitor with Tracking</h3>
+                  <div class="content product-advantage-card__text">
+                    <p>Easily watch your stats, track progress, and stay motivated with Row Warrior’s Enhanced LED Monitor.</p>
+                  </div>
+                </div>
+              </article>
+              <article class="product-advantage-card product-advantage__aside-list-card">
+                <div class="product-advantage-card__media">
+                  <picture class="product-advantage-card__img"><img src="images/product-advantage-card-3.png" alt="Simple Compact Storage"/></picture>
+                </div>
+                <div class="product-advantage-card__content">
+                  <h3 class="product-advantage-card__title">Simple Compact Storage</h3>
+                  <div class="content product-advantage-card__text">
+                    <p>Row Warrior easily folds and separates into 2 standing pieces for simple, compact storage in your home gym or living space.</p>
+                  </div>
+                </div>
+              </article>
+              <article class="product-advantage-card product-advantage__aside-list-card">
+                <div class="product-advantage-card__media">
+                  <picture class="product-advantage-card__img"><img src="images/product-advantage-card-4.png" alt="Comfortable Cushioned Seat"/></picture>
+                </div>
+                <div class="product-advantage-card__content">
+                  <h3 class="product-advantage-card__title">Comfortable Cushioned Seat</h3>
+                  <div class="content product-advantage-card__text">
+                    <p>Row longer, and get the most out of your workout with Row Warrior’s comfortable, cushioned seat.</p>
+                  </div>
+                </div>
+              </article>
+              <article class="product-advantage-card product-advantage__aside-list-card">
+                <div class="product-advantage-card__media">
+                  <picture class="product-advantage-card__img"><img src="images/product-advantage-card-5.png" alt="Ergonomic Design"/></picture>
+                </div>
+                <div class="product-advantage-card__content">
+                  <h3 class="product-advantage-card__title">Ergonomic Design</h3>
+                  <div class="content product-advantage-card__text">
+                    <p>You’re here to break a sweat, not your back. Row Warrior works with your body’s natural tendencies, not against it.</p>
+                  </div>
+                </div>
+              </article>
+              <article class="product-advantage-card product-advantage__aside-list-card">
+                <div class="product-advantage-card__media">
+                  <picture class="product-advantage-card__img"><img src="images/product-advantage-card-6.png" alt="Built-in Mobile Phone Holder"/></picture>
+                </div>
+                <div class="product-advantage-card__content">
+                  <h3 class="product-advantage-card__title">Built-in Mobile Phone Holder</h3>
+                  <div class="content product-advantage-card__text">
+                    <p>Watch a show, listen to a podcast, or enjoy your favorite music with easy access to your cell phone.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="product-advantage__footer">
+          <div class="product-advantage__footer-suptitle">Row warrior</div>
+          <div class="product-advantage__footer-title">Because life is a battle, and victory is&nbsp;yours.</div>
+        </div>
+      </div>
+    </section>
+    <div class="gallery-slider">
+      <div class="js-gallery-slider-init gallery-slider__block">
+        <div class="gallery-slider__block-slide">
+          <picture class="gallery-slider__block-slide-media"><img src="images/video-slider-1.jpg" alt="Gallery photo 1"/></picture>
+        </div>
+        <div class="gallery-slider__block-slide">
+          <picture class="gallery-slider__block-slide-media"><img src="images/video-slider-2.jpg" alt="Gallery photo 2"/></picture>
+        </div>
+      </div>
+    </div>
+    <section class="reviews-section">
+      <div class="container reviews-section__container">
+        <h2 class="reviews-section__title">Testimonials</h2>
+        <div class="content reviews-section__description">
+          <p>A challenging yet low-impact, strength-building experience that beginning and seasoned rowers love, this is the stress-relieving, confidence-building workout you’ll look forward to everyday.</p>
+        </div>
+        <div class="reviews-section__slider-control"></div>
+        <div class="reviews-section__inner">
+          <div class="reviews-section__inner-aside">
+            <div class="reviews-section__inner-aside-text">What our<br><strong>warriors</strong><br>are saying on<br><a href="#">Amazon.com</a></div>
+          </div>
+          <div class="reviews-section__inner-slider">
+            <div class="js-reviews-slider-init reviews-slider">
+              <div class="reviews-slider__slide">
+                <div class="reviews-slider__slide-inner">
+                  <div class="rating-card rating-card--5 reviews-slider__slide-rating"></div>
+                  <div class="content reviews-slider__slide-content">
+                    <p>I love this rowing machine! I was surprised how quickly it was delivered after I ordered it. Really a high quality piece of equipment. I feel like I should open a gym in my house now. It's that good!"</p>
+                  </div>
+                  <div class="reviews-slider__slide-name">–Stacy</div>
+                </div>
+              </div>
+              <div class="reviews-slider__slide">
+                <div class="reviews-slider__slide-inner">
+                  <div class="rating-card rating-card--5 reviews-slider__slide-rating"></div>
+                  <div class="content reviews-slider__slide-content">
+                    <p>I love this rowing machine! I was surprised how quickly it was delivered after I ordered it. Really a high quality piece of equipment. I feel like I should open a gym in my house now. It's that good!"</p>
+                  </div>
+                  <div class="reviews-slider__slide-name">–Stacy</div>
+                </div>
+              </div>
+              <div class="reviews-slider__slide">
+                <div class="reviews-slider__slide-inner">
+                  <div class="rating-card rating-card--5 reviews-slider__slide-rating"></div>
+                  <div class="content reviews-slider__slide-content">
+                    <p>I love this rowing machine! I was surprised how quickly it was delivered after I ordered it. Really a high quality piece of equipment. I feel like I should open a gym in my house now. It's that good!"</p>
+                  </div>
+                  <div class="reviews-slider__slide-name">–Stacy</div>
+                </div>
+              </div>
+              <div class="reviews-slider__slide">
+                <div class="reviews-slider__slide-inner">
+                  <div class="rating-card rating-card--5 reviews-slider__slide-rating"></div>
+                  <div class="content reviews-slider__slide-content">
+                    <p>I love this rowing machine! I was surprised how quickly it was delivered after I ordered it. Really a high quality piece of equipment. I feel like I should open a gym in my house now. It's that good!"</p>
+                  </div>
+                  <div class="reviews-slider__slide-name">–Stacy</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="good-appeal">
+      <div class="container good-appeal__container">
+        <div class="good-appeal__inner">
+          <div class="good-appeal__media">
+            <picture class="good-appeal__picture"><img src="images/good-appeal-img-1.png" alt="Train like a warrior, transform your life - and do it all without leaving your door"/></picture>
+          </div>
+          <div class="good-appeal__info">
+            <div class="good-appeal__content">
+              <ul class="nav-good nav-good--size-sm nav-good--theme-accent good-appeal__nav">
+                <li class="nav-good__item"><a class="nav-good__link is-active" href="#">Black</a></li>
+                <li class="nav-good__item"><a class="nav-good__link" href="#">White</a></li>
+              </ul>
+              <div class="good-appeal__suptitle">Are you ready?</div>
+              <h2 class="good-appeal__title">Train like a warrior, transform your life - and do it all without leaving your door</h2><a class="btn btn--theme-accent good-appeal__btn" href="#">Let’s row</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__row">
+          <div class="footer__row-col footer__row-col--logo"><a class="footer__logo" href="/"><img src="images/logo-short.svg" alt="RowWarrior"/></a>
+            <div class="footer__bottom">
+              <p class="d-sm-none footer__copyright">@Row Warrior 2022</p>
+            </div>
+          </div>
+          <div class="footer__row-col footer__row-col--nav">
+            <div class="content footer__description">
+              <p>Warriors are more powerful when they work together. Don’t miss out on our exclusive workout videos, community highlights, product updates, and more.</p>
+              <p>COME ROW WITH US.</p>
+            </div>
+            <div class="footer__bottom">
+              <div class="footer__menu">
+                <ul class="footer__nav">
+                  <li><a href="#">Privacy policy</a></li>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+                <p class="d-sm-block footer__copyright">@Row Warrior 2022</p>
+                <ul class="sc-list footer__sc-list">
+                  <li class="sc-list__item"><a class="sc-list__link" href="#">
+                      <svg class="icon sc-list__icon">
+                        <use xlink:href="images/sprite.svg#facebook"></use>
+                      </svg></a></li>
+                  <li class="sc-list__item"><a class="sc-list__link" href="#">
+                      <svg class="icon sc-list__icon">
+                        <use xlink:href="images/sprite.svg#instagram"></use>
+                      </svg></a></li>
+                  <li class="sc-list__item"><a class="sc-list__link" href="#">
+                      <svg class="icon sc-list__icon">
+                        <use xlink:href="images/sprite.svg#twitter"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__row-col footer__row-col--subscribe">
+            <div class="subscribe-block footer__subscribe">
+              <div class="subscribe-block__title">Get the good news</div>
+              <div class="subscribe-block__subtitle">JOIN THE COMMUNITY OF WARRIORS</div>
+              <form class="subscribe-form subscribe-block__form" action="#">
+                <input class="subscribe-form__input" type="text" name="subscribe-email" placeholder="Email"/>
+                <button class="subscribe-form__btn" type="button">
+                  <svg class="icon subscribe-form__btn-icon">
+                    <use xlink:href="images/sprite.svg#arrow-btn-subscribe"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>

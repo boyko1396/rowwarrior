@@ -1,9 +1,13 @@
 header.header
   .container.header__container
+    button(type="button").js-header-nav-mobile-btn.header__toggle
+      span
+      span
+      span
     nav(role="navigation").header-nav.header__nav
       ul.header-nav__list
         li.header-nav__item
-          a(href="#").header-nav__link Shop
+          a(href="#").js-header-nav-link-dropdown.header-nav__link.header-nav__link--dropdown Shop
           ul.header-nav__dropdown
             li.header-nav__dropdown-item
               picture.header-nav__dropdown-picture
@@ -11,16 +15,29 @@ header.header
               a(href="#").header-nav__dropdown-link Black row warrior
             li.header-nav__dropdown-item
               picture.header-nav__dropdown-picture
-                img(src="/images/header-nav-img-2.png", alt="Black row warrior")
-              a(href="#").header-nav__dropdown-link Black row warrior
+                img(src="/images/header-nav-img-2.png", alt="White row warrior")
+              a(href="#").header-nav__dropdown-link White row warrior
             li.header-nav__dropdown-item
               picture.header-nav__dropdown-picture
-                img(src="/images/header-nav-img-3.png", alt="Black row warrior")
-              a(href="#").header-nav__dropdown-link Black row warrior
+                img(src="/images/header-nav-img-3.png", alt="Merch")
+              a(href="#").header-nav__dropdown-link Merch
         li.header-nav__item
           a(href="#").header-nav__link About
         li.header-nav__item
           a(href="#").header-nav__link Contact
+      ul.sc-list.header-nav__sc-list
+        li.sc-list__item
+          a(href="#").sc-list__link
+            svg.icon.sc-list__icon
+              use(xlink:href="/images/sprite.svg#facebook")
+        li.sc-list__item
+          a(href="#").sc-list__link
+            svg.icon.sc-list__icon
+              use(xlink:href="/images/sprite.svg#instagram")
+        li.sc-list__item
+          a(href="#").sc-list__link
+            svg.icon.sc-list__icon
+              use(xlink:href="/images/sprite.svg#twitter")
     .header__logo-wrap
       a(href="/").header__logo
         img(src="/images/logo-long.svg", alt="RowWarrior").header__logo-img

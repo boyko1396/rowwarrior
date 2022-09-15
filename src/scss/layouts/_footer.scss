@@ -1,28 +1,73 @@
 .footer {
     background: $color-accent-2;
-    padding: 40px 0;
+    padding: 80px 0;
     color: $color-white-1;
     border-top: 2px solid $color-white-1;
+    @media (max-width: $lg) {
+        padding: 50px 0;
+        border-top: none;
+    }
     &__container {
     }
     &__row {
-        margin: 0 -10px;
+        margin: 0 -15px;
         display: flex;
+        justify-content: space-between;
+        @media (max-width: $lg) {
+            flex-wrap: wrap;
+        }
     }
     &__row-col {
         padding: 0 15px;
-        display: flex;
-        flex-direction: column;
+        @media (min-width: $sm-mf) {
+            display: flex;
+            flex-direction: column;
+        }
         &--logo {
-            max-width: 13%;
-            flex: 0 0 13%;
+            flex-shrink: 0;
+            @media (max-width: $lg) {
+                max-width: 34%;
+                flex: 0 0 34%;
+                order: 0;
+            }
+            @media (max-width: $sm) {
+                max-width: 100%;
+                margin-bottom: 35px;
+                flex-basis: 100%;
+                text-align: center;
+            }
         }
         &--nav {
+            margin: 0 3vw;
             flex-grow: 1;
+            @media (max-width: 1600px) {
+                margin-right: 1.5vw;
+                margin-left: 1.5vw;
+            }
+            @media (max-width: $lg) {
+                max-width: 100%;
+                margin: 50px 0 0;
+                flex: 0 0 100%;
+                order: 3;
+            }
+            @media (max-width: $sm) {
+                max-width: 100%;
+                margin-top: 25px;
+                flex-basis: 100%;
+            }
         }
         &--subscribe {
-            max-width: 32%;
-            flex: 0 0 32%;
+            min-width: 450px;
+            flex-shrink: 0;
+            @media (max-width: $lg) {
+                max-width: 66%;
+                flex: 0 0 66%;
+                order: 2;
+            }
+            @media (max-width: $sm) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
         }
     }
     &__logo {
@@ -33,6 +78,11 @@
         display: inline-block;
         vertical-align: top;
         transition: all .4s;
+        @media (max-width: $sm) {
+            max-width: 76px;
+            margin-right: initial;
+            margin-bottom: 0;
+        }
         &:hover {
             text-decoration: none;
             @media (min-width: $lg-mf) {
@@ -51,14 +101,27 @@
     &__copyright {
         margin: 0 0 20px;
         font-size: var(--fs-7);
+        @media (max-width: $sm) {
+            width: 100%;
+            order: 2;
+        }
     }
     &__description {
         font-size: var(--fs-7);
+        @media (max-width: $sm) {
+            text-align: center;
+        }
     }
     &__menu {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @media (min-width: $sm-mf) {
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (max-width: $sm) {
+            flex-wrap: wrap;
+            text-align: center;
+        }
     }
     &__nav {
         margin: 0;
@@ -66,9 +129,21 @@
         display: flex;
         font-size: var(--fs-7);
         list-style-type: none;
+        @media (max-width: $sm) {
+            width: 100%;
+            justify-content: center;
+            order: 3;
+        }
         li {
-            margin: 0 25px 0 0;
+            margin: 0;
             padding: 0;
+            @media (min-width: $sm-mf) {
+                margin-right: 25px;
+            }
+            @media (max-width: $sm) {
+                margin-right: 12px;
+                margin-left: 12px;
+            }
         }
         a {
             display: block;
@@ -76,5 +151,11 @@
         }
     }
     &__sc-list {
+        @media (max-width: $sm) {
+            width: 100%;
+            margin: 30px 0 20px;
+            justify-content: center;
+            order: 1;
+        }
     }
 }

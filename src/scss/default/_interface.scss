@@ -4,7 +4,7 @@ body {
 }
 
 html {
-    font-size: 10px;
+    font-size: .52083333333vw;
 }
 
 body {
@@ -18,6 +18,17 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     &.is-menu-opened {
+        @media (max-width: $lg) {
+            overflow: hidden;
+        }
+    }
+    &.is-video-modal {
+        overflow: hidden;
+        @media (min-width: $lg-mf) {
+            padding-right: 17px;
+        }
+    }
+    &.is-menu-mobile-show {
         @media (max-width: $lg) {
             overflow: hidden;
         }

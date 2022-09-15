@@ -5,7 +5,25 @@
         vertical-align: top;
     }
     &__block-slide-media {
-        padding-bottom: 56%;
+        padding-bottom: 52.916666666%;
         @extend .img-cover;
+    }
+    .btn-slider {
+        &--prev {
+            @media (max-width: $md) {
+                margin-left: 36px;
+            }
+            @media (max-width: $sm) {
+                margin-left: 12px;
+            }
+        }
+        &--next {
+            @media (max-width: $md) {
+                margin-right: 36px;
+            }
+            @media (max-width: $sm) {
+                margin-right: 12px;
+            }
+        }
     }
 }

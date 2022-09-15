@@ -1,8 +1,11 @@
 .video-section {
     background: $color-white-1;
-    padding-bottom: 56.25%;
+    padding-bottom: 50.520833333%;
     position: relative;
     z-index: 0;
+    @media (max-width: $sm) {
+        padding-bottom: 88%;
+    }
     &__bg {
         width: 100%;
         height: 100%;

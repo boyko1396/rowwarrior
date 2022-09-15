@@ -3,40 +3,85 @@
     flex-direction: column;
     text-align: center;
     &__title {
-        margin: 0 0 20px;
+        margin: 0 0 35px;
         font-weight: 500;
         font-size: var(--fs-10);
         text-transform: uppercase;
+        @media (max-width: $lg) {
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
     }
     &__text {
-        margin: 0 0 60px;
+        margin: 0 0 80px;
         font-weight: 300;
         font-size: var(--fs-8);
+        @media (max-width: $lg) {
+            margin-bottom: 40px;
+            font-size: 22px;
+        }
     }
     &__btn {
         margin-top: auto;
+        @media (max-width: $lg) {
+            margin: 0 auto;
+        }
     }
-
 }
+
 .product-benefits {
-    padding: 100px 0;
+    padding: 110px 0;
+    @media (max-width: $lg) {
+        padding: 60px 0;
+    }
     &__container {
     }
     &__description {
         max-width: 750px;
-        margin: 0 auto 90px;
+        margin: 0 auto 100px;
         font-weight: 300;
         font-size: var(--fs-5);
         text-align: center;
+        @media (max-width: $lg) {
+            margin-bottom: 50px;
+            font-size: 22px;
+        }
     }
     &__list {
         margin: 0 -20px;
         display: flex;
         justify-content: space-between;
+        @media (max-width: $lg) {
+            flex-wrap: wrap;
+        }
         &-col {
-            max-width: 480px;
-            margin: 0 20px;
-            flex: 0 0 480px;
+            max-width: 520px;
+            padding: 0 20px;
+            flex: 0 0 520px;
+            @media (max-width: 1600px) {
+                max-width: 33.3333%;
+                flex-basis: 33.3333%;
+            }
+            @media (max-width: $lg) {
+                max-width: 750px;
+                margin: 0 auto;
+                flex-basis: 100%;
+            }
+            &:nth-child(1) {
+                @media (max-width: $lg) {
+                    order: 0;
+                }
+            }
+            &:nth-child(2) {
+                @media (max-width: $lg) {
+                    order: 2;
+                }
+            }
+            &:nth-child(3) {
+                @media (max-width: $lg) {
+                    order: 1;
+                }
+            }
         }
         &-card {
             height: 100%;
