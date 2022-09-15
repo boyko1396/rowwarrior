@@ -7,6 +7,9 @@
         @media (max-width: $sm) {
             width: 69vw;
         }
+        @media (max-width: 414px) {
+            width: 80vw;
+        }
         &-inner {
             height: 100%;
             padding: 30px;

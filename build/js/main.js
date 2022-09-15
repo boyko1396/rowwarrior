@@ -6,6 +6,7 @@ $(document).ready(function() {
   modalVideoInit();
   headerMenuMobile();
   headerSubmenuMobile();
+  gallerySliderTab();
 
   // header dropdown menu mobile
   function headerMenuMobile() {
@@ -14,6 +15,22 @@ $(document).ready(function() {
       $('body').toggleClass('is-menu-mobile-show');
       $('.header').toggleClass('is-menu-mobile-show');
       $('.header__nav').toggleClass('is-show');
+    });
+  }
+
+  function headerSubmenuMobile() {
+    $('.js-header-nav-link-dropdown').click(function() {
+      $(this).toggleClass('is-active');
+      $(this).siblings('.header-nav__dropdown').toggleClass('is-show');
+      return false;
+    });
+  }
+
+  // gallery tab
+  function gallerySliderTab() {
+    $('.js-gallery-tab-click').click(function() {
+      $('.js-gallery-tab-click').toggleClass('is-active');
+      $('.gallery-slider__block').toggleClass('is-active');
     });
   }
 
@@ -41,19 +58,17 @@ $(document).ready(function() {
   // slick slider init
   function gallerySliderInit() {
     if ($('.js-gallery-slider-init')[0]){
-      $(window).on('load resize orientationchange', function() {
-        $('.js-gallery-slider-init').each(function(){
-          var $carousel = $(this);
-          $carousel.slick({
-            fade: true,
-            speed: 600,
-            arrows: true,
-            prevArrow: '<button type="button" class="btn-slider btn-slider--theme-accent btn-slider--size-lg btn-slider--prev"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-prev"></span></button>',
-            nextArrow: '<button type="button" class="btn-slider btn-slider--theme-accent btn-slider--size-lg btn-slider--next"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-next"></span></button>',
-            dots: false,
-            slidesToScroll: 1,
-            slidesToShow: 1
-          });
+      $('.js-gallery-slider-init').each(function(){
+        var $carousel = $(this);
+        $carousel.slick({
+          fade: true,
+          speed: 600,
+          arrows: true,
+          prevArrow: '<button type="button" class="btn-slider btn-slider--theme-accent btn-slider--size-lg btn-slider--prev"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-prev"></span></button>',
+          nextArrow: '<button type="button" class="btn-slider btn-slider--theme-accent btn-slider--size-lg btn-slider--next"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-next"></span></button>',
+          dots: false,
+          slidesToScroll: 1,
+          slidesToShow: 1
         });
       });
     }
@@ -61,35 +76,33 @@ $(document).ready(function() {
 
   function reviewsSliderInit() {
     if ($('.js-reviews-slider-init')[0]){
-      $(window).on('load resize orientationchange', function() {
-        $('.js-reviews-slider-init').each(function(){
-          var $carousel = $(this);
-          $carousel.slick({
-            fade: false,
-            speed: 340,
-            arrows: true,
-            prevArrow: '<button type="button" class="btn-slider btn-slider--theme-accent-light btn-slider--size-md btn-slider--prev"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-prev"></span></button>',
-            nextArrow: '<button type="button" class="btn-slider btn-slider--theme-accent-light btn-slider--size-md btn-slider--next"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-next"></span></button>',
-            appendArrows: $('.reviews-section__slider-control'),
-            dots: false,
-            slidesToScroll: 1,
-            slidesToShow: 3,
-            responsive: [
-              {
-                breakpoint: 992,
-                settings: {
-                  slidesToShow: 2
-                }
-              },
-              {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 2,
-                  variableWidth: true
-                }
+      $('.js-reviews-slider-init').each(function(){
+        var $carousel = $(this);
+        $carousel.slick({
+          fade: false,
+          speed: 340,
+          arrows: true,
+          prevArrow: '<button type="button" class="btn-slider btn-slider--theme-accent-light btn-slider--size-md btn-slider--prev"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-prev"></span></button>',
+          nextArrow: '<button type="button" class="btn-slider btn-slider--theme-accent-light btn-slider--size-md btn-slider--next"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-next"></span></button>',
+          appendArrows: $('.reviews-section__slider-control'),
+          dots: false,
+          slidesToScroll: 1,
+          slidesToShow: 3,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2
               }
-            ]
-          });
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                variableWidth: true
+              }
+            }
+          ]
         });
       });
     }
@@ -97,28 +110,26 @@ $(document).ready(function() {
 
   function productSliderInit() {
     if ($('.js-product-slider-init')[0]){
-      $(window).on('load resize orientationchange', function() {
-        $('.js-product-slider-init').each(function(){
-          var $carousel = $(this);
-          $carousel.slick({
-            fade: true,
-            speed: 600,
-            arrows: false,
-            dots: false,
-            slidesToScroll: 1,
-            slidesToShow: 1,
-            swipe: false,
-            asNavFor: $('.js-product-nav-slider-init'),
-            responsive: [
-              {
-                breakpoint: 1200,
-                settings: {
-                  dots: true,
-                  swipe: true
-                }
+      $('.js-product-slider-init').each(function(){
+        var $carousel = $(this);
+        $carousel.slick({
+          fade: true,
+          speed: 600,
+          arrows: false,
+          dots: false,
+          slidesToScroll: 1,
+          slidesToShow: 1,
+          swipe: false,
+          asNavFor: $('.js-product-nav-slider-init'),
+          responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                dots: true,
+                swipe: true
               }
-            ]
-          });
+            }
+          ]
         });
       });
     }
@@ -126,22 +137,20 @@ $(document).ready(function() {
 
   function productNavSliderInit() {
     if ($('.js-product-nav-slider-init')[0]){
-      $(window).on('load resize orientationchange', function() {
-        $('.js-product-nav-slider-init').each(function(){
-          var $carousel = $(this);
-          $carousel.slick({
-            infinite: false,
-            fade: false,
-            speed: 340,
-            arrows: false,
-            dots: false,
-            slidesToScroll: 1,
-            slidesToShow: 5,
-            vertical: true,
-            verticalSwiping: true,
-            asNavFor: $('.js-product-slider-init'),
-            focusOnSelect: true
-          });
+      $('.js-product-nav-slider-init').each(function(){
+        var $carousel = $(this);
+        $carousel.slick({
+          infinite: false,
+          fade: false,
+          speed: 340,
+          arrows: false,
+          dots: false,
+          slidesToScroll: 1,
+          slidesToShow: 5,
+          vertical: true,
+          verticalSwiping: true,
+          asNavFor: $('.js-product-slider-init'),
+          focusOnSelect: true
         });
       });
     }

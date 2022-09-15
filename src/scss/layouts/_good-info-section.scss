@@ -51,6 +51,10 @@
             max-width: 100%;
             padding: 40px 20px;
         }
+        @media (max-width: 414px) {
+            padding-right: 0;
+            padding-left: 0;
+        }
     }
     &__nav {
         margin: 0 0 60px;
@@ -84,6 +88,9 @@
             max-width: 90%;
             margin: 0 auto;
             font-size: 18px;
+        }
+        @media (max-width: 414px) {
+            max-width: 100%;
         }
     }
 }

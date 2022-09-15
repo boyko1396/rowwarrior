@@ -1,12 +1,82 @@
 .gallery-slider {
+    position: relative;
     &__block {
+        height: auto;
+        &:not(.is-active) {
+            height: 0;
+            display: block;
+            overflow: hidden;
+        }
+        &-slide {
+            vertical-align: top;
+        }
+        &-slide-media {
+            padding-bottom: 52.916666666%;
+            @extend .img-cover;
+        }
     }
-    &__block-slide {
-        vertical-align: top;
-    }
-    &__block-slide-media {
-        padding-bottom: 52.916666666%;
-        @extend .img-cover;
+    &__nav {
+        width: 280px;
+        margin: 0 0 0 -140px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        z-index: 1;
+        @media (max-width: $lg) {
+            width: 116px;
+            margin-left: -58px;
+            bottom: 20px;
+        }
+        &-item {
+            width: 116px;
+            height: 116px;
+            margin: 0 20px;
+            padding: 0;
+            display: block;
+            border: 2px solid $color-white-1;
+            flex: 0 0 116px;
+            border-radius: 50%;
+            transition: all .4s;
+            transition-property: background;
+            cursor: pointer;
+            @media (max-width: $lg) {
+                width: 44px;
+                height: 44px;
+                margin: 0 7px;
+                border-width: 1px;
+                flex-basis: 44px;
+            }
+            &.is-active {
+                pointer-events: none;
+                cursor: default;
+            }
+            &--black {
+                background: rgba(#060407, .9);
+                &:not(.is-active) {
+                    background: rgba(#060407, .5);
+                    &:hover {
+                        @media (min-width: $md-mf) {
+                            background: rgba(#060407, .9);
+                        }
+                    }
+                }
+            }
+            &--white {
+                background: rgba(#f4f4f4, .9);
+                &:not(.is-active) {
+                    background: rgba(#f4f4f4, .5);
+                    &:hover {
+                        @media (min-width: $md-mf) {
+                            background: rgba(#f4f4f4, .9);
+                        }
+                    }
+                }
+            }
+        }
     }
     .btn-slider {
         &--prev {

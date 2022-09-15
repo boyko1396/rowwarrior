@@ -2,6 +2,9 @@
     padding-bottom: 50.625%;
     position: relative;
     z-index: 0;
+    @media (max-width: $xs) {
+        padding-bottom: 90%;
+    }
     &__bg {
         width: 100%;
         height: 100%;

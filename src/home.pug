@@ -55,6 +55,10 @@ body
           .good-section__media
             picture.good-section__picture
               img(src="/images/good-img-2.png", alt="Unbox, unwrap, assemble, and row")
+            .video-cover.good-section__video
+              video(autoplay, loop, playsinline, muted).video-cover__el
+                source(src="/media/video-good-1.webm", type="video/webm")
+                source(src="/media/video-good-1.mp4", type="video/mp4")
           .good-section__content
             ul.nav-good.nav-good--size-md.nav-good--theme-white.good-section__nav
               li.nav-good__item
@@ -148,7 +152,7 @@ body
                 a(href="#").nav-good__link.is-active Smart
               li.nav-good__item
                 a(href="#").nav-good__link Solid
-            h2.good-info-section__title Track your stats &&nbsp;watch&nbsp;your&nbsp;gains
+            h2.good-info-section__title Track your stats &&nbsp;watch your&nbsp;gains
             .content.good-info-section__text
               p When it comes to staying motivated, there’s nothing more powerful than seeing your progress. With its built-in Bluetooth LED monitor, Row Warrior will help you track time, distance, row count, calories burned, heart rate, and more.
         .good-info-section__media
@@ -164,7 +168,7 @@ body
                 a(href="#").nav-good__link Smart
               li.nav-good__item
                 a(href="#").nav-good__link.is-active Solid
-            h2.good-info-section__title Battle-tested &&nbsp;built&nbsp;to&nbsp;last
+            h2.good-info-section__title Battle-tested &&nbsp;built to&nbsp;last
             .content.good-info-section__text
               p Made with an industrial-grade steel frame that can handle weights of up to 550 pounds, Row Warrior sturdy design features wear-resistant surfaces that can withstand heavy use so it will look sleek and clean for years to come.
         .good-info-section__media
@@ -182,13 +186,23 @@ body
         h2.appeal-section__title.appeal-section__title--size-1.circle Train like a warrior
 
     .gallery-slider
-      .js-gallery-slider-init.gallery-slider__block
+      .js-gallery-slider-init.gallery-slider__block.is-active
         .gallery-slider__block-slide
           picture.gallery-slider__block-slide-media
             img(src="/images/video-slider-1.jpg", alt="Gallery photo 1")
         .gallery-slider__block-slide
           picture.gallery-slider__block-slide-media
             img(src="/images/video-slider-2.jpg", alt="Gallery photo 2")
+      .js-gallery-slider-init.gallery-slider__block
+        .gallery-slider__block-slide
+          picture.gallery-slider__block-slide-media
+            img(src="/images/video-slider-3.jpg", alt="Gallery photo 3")
+        .gallery-slider__block-slide
+          picture.gallery-slider__block-slide-media
+            img(src="/images/video-slider-4.jpg", alt="Gallery photo 4")
+      ul.gallery-slider__nav
+        li.js-gallery-tab-click.gallery-slider__nav-item.gallery-slider__nav-item--black.is-active
+        li.js-gallery-tab-click.gallery-slider__nav-item.gallery-slider__nav-item--white
 
     section.reviews-section
       .container.reviews-section__container

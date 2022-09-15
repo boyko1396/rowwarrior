@@ -44,6 +44,9 @@
     }
     &__video {
         z-index: -1;
+        .video-cover__el {
+            object-position: center bottom;
+        }
     }
     &__content {
         max-width: 50%;
@@ -110,6 +113,9 @@
             max-width: 90%;
             margin: 0 auto;
             font-size: 18px;
+        }
+        @media (max-width: 414px) {
+            max-width: 100%;
         }
     }
 }
