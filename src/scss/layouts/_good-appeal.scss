@@ -53,6 +53,9 @@
     }
     &__picture {
         max-width: 1200px;
+        &:not(.is-show) {
+            display: none;
+        }
         @media (max-width: $lg) {
             max-width: 100%;
         }
@@ -99,6 +102,11 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
+        }
+    }
+    &__tab {
+        &:not(.is-show) {
+            display: none;
         }
     }
     &__suptitle {

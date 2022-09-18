@@ -7,6 +7,8 @@ $(document).ready(function() {
   headerMenuMobile();
   headerSubmenuMobile();
   gallerySliderTab();
+  scrollTarget();
+  tabMainGood();
 
   // header dropdown menu mobile
   function headerMenuMobile() {
@@ -154,6 +156,26 @@ $(document).ready(function() {
         });
       });
     }
+  }
+
+  // scroll target
+  function scrollTarget() {
+    $('.js-target-scroll').click(function(){
+      $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+      }, 450);
+      return false;
+    });
+  }
+
+  // tab main good
+  function tabMainGood() {
+    $('.js-tab-link').click(function() {
+      $('.js-tab-link').removeClass('is-active');
+      $(this).addClass('is-active');
+      $('.good-appeal__picture, .good-appeal__tab').toggleClass('is-show');
+      return false;
+    });
   }
 });
 
