@@ -8,6 +8,10 @@ body
     main(role="main").main-product
       picture.main-product__bg
         img(src="/images/main-img-1.jpg", alt="Unleash your inner warrior")
+      .video-cover.main-product__video
+        video(autoplay, loop, playsinline, muted).video-cover__el
+          source(src="/media/video-black-1.webm", type="video/webm")
+          source(src="/media/video-black-1.mp4", type="video/mp4")
       .container.main-product__contaier
         .main-product__content
           h1.main-product__title Unleash<br>your inner<br>warrior
@@ -39,6 +43,10 @@ body
               .product-slider__slide
                 picture.product-slider__slide-picture
                   img(src="/images/product-slider-black-5.jpg", alt="Product 5")
+                .video-cover.product-slider__slide-video
+                  video(autoplay, loop, playsinline, muted).video-cover__el
+                    source(src="/media/video-black-2.webm", type="video/webm")
+                    source(src="/media/video-black-2.mp4", type="video/mp4")
             .product-nav-slider.product-section__media-nav
               .js-product-nav-slider-init.product-nav-slider__block
                 .product-nav-slider__slide
@@ -196,23 +204,23 @@ body
               td Package Weight
               td 34.47 Kilograms
 
-    section.product-advantage
+    section.js-product-advantage-view.product-advantage
       .container.product-advantage__container
         .product-advantage__inner
           .product-advantage__media
             .product-advantage__media-list
               .product-advantage__media-list-col.product-advantage__media-list-col--1
                 picture.product-advantage__img
-                  img(src="/images/product-advantage-img-1.jpg", alt="")
+                  img(src="/images/product-advantage-black-1.jpg", alt="")
               .product-advantage__media-list-col.product-advantage__media-list-col--2
                 picture.product-advantage__img
-                  img(src="/images/product-advantage-img-2.jpg", alt="")
+                  img(src="/images/product-advantage-black-2.jpg", alt="")
               .product-advantage__media-list-col.product-advantage__media-list-col--3
                 picture.product-advantage__img
-                  img(src="/images/product-advantage-img-3.jpg", alt="")
+                  img(src="/images/product-advantage-black-3.jpg", alt="")
               .product-advantage__media-list-col.product-advantage__media-list-col--4
                 picture.product-advantage__img
-                  img(src="/images/product-advantage-img-4.jpg", alt="")
+                  img(src="/images/product-advantage-black-4.jpg", alt="")
           .product-advantage__aside
             h2.product-advantage__aside-title Everything you need to&nbsp;train like a warrior right at home:
             .product-advantage__aside-list
@@ -269,13 +277,47 @@ body
           .product-advantage__footer-title Because life is a battle, and victory is&nbsp;yours.
 
     .gallery-slider
+      .js-gallery-slider-init.gallery-slider__block.is-active
+        .gallery-slider__block-slide
+          picture.gallery-slider__block-slide-media
+            img(src="/images/video-slider-black-1.jpg", alt="Gallery photo black 1")
+        .gallery-slider__block-slide
+          picture.gallery-slider__block-slide-media
+            img(src="/images/video-slider-black-2.jpg", alt="Gallery photo black 2")
+        .gallery-slider__block-slide
+          picture.gallery-slider__block-slide-media
+            img(src="/images/video-slider-black-3.jpg", alt="Gallery photo black 3")
+        .gallery-slider__block-slide
+          picture.gallery-slider__block-slide-media
+            img(src="/images/video-slider-black-4.jpg", alt="Gallery photo black 4")
+        .gallery-slider__block-slide
+          picture.gallery-slider__block-slide-media
+            img(src="/images/video-slider-black-5.jpg", alt="Gallery photo black 5")
+        .gallery-slider__block-slide
+          picture.gallery-slider__block-slide-media
+            img(src="/images/video-slider-black-6.jpg", alt="Gallery photo black 6")
       .js-gallery-slider-init.gallery-slider__block
         .gallery-slider__block-slide
           picture.gallery-slider__block-slide-media
-            img(src="/images/video-slider-1.jpg", alt="Gallery photo 1")
+            img(src="/images/video-slider-white-1.jpg", alt="Gallery photo white 1")
         .gallery-slider__block-slide
           picture.gallery-slider__block-slide-media
-            img(src="/images/video-slider-2.jpg", alt="Gallery photo 2")
+            img(src="/images/video-slider-white-2.jpg", alt="Gallery photo white 2")
+        .gallery-slider__block-slide
+          picture.gallery-slider__block-slide-media
+            img(src="/images/video-slider-white-3.jpg", alt="Gallery photo white 3")
+        .gallery-slider__block-slide
+          picture.gallery-slider__block-slide-media
+            img(src="/images/video-slider-white-4.jpg", alt="Gallery photo white 4")
+        .gallery-slider__block-slide
+          picture.gallery-slider__block-slide-media
+            img(src="/images/video-slider-white-5.jpg", alt="Gallery photo white 5")
+        .gallery-slider__block-slide
+          picture.gallery-slider__block-slide-media
+            img(src="/images/video-slider-white-6.jpg", alt="Gallery photo white 6")
+      ul.gallery-slider__nav
+        li.js-gallery-tab-click.gallery-slider__nav-item.gallery-slider__nav-item--black.is-active
+        li.js-gallery-tab-click.gallery-slider__nav-item.gallery-slider__nav-item--white
 
     section.reviews-section
       .container.reviews-section__container

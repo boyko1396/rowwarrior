@@ -106,6 +106,8 @@
                 padding: 0 15px;
                 flex-shrink: 0;
                 flex-grow: 0;
+                transition: all .4s;
+                transition-property: opacity, visibility;
                 @media (max-width: $sm) {
                     margin-bottom: 12px;
                     padding: 0 6px;
@@ -114,24 +116,34 @@
                     max-width: 52%;
                     flex-basis: 52%;
                     align-self: flex-end;
+                    transition-delay: .2s;
                 }
                 &--2 {
                     max-width: 45.6%;
                     flex-basis: 45.6%;
                     align-self: flex-end;
+                    transition-delay: .6s;
                 }
                 &--3 {
                     max-width: 51%;
                     margin-left: -2%;
                     flex-basis: 51%;
                     align-self: flex-start;
+                    transition-delay: .8s;
                 }
                 &--4 {
                     max-width: 51%;
                     flex-basis: 51%;
                     align-self: flex-start;
+                    transition-delay: .4s;
                 }
             }
+        }
+    }
+    &:not(.is-view) &__media-list-col {
+        @media (min-width: $lg-mf) {
+            opacity: 0;
+            visibility: hidden;
         }
     }
     &__img {

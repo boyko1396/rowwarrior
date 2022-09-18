@@ -64,8 +64,8 @@ $(document).ready(function() {
           fade: true,
           speed: 600,
           arrows: true,
-          prevArrow: '<button type="button" class="btn-slider btn-slider--theme-accent btn-slider--size-lg btn-slider--prev"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-prev"></span></button>',
-          nextArrow: '<button type="button" class="btn-slider btn-slider--theme-accent btn-slider--size-lg btn-slider--next"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-next"></span></button>',
+          prevArrow: '<button type="button" class="btn-slider btn-slider--theme-accent btn-slider--size-lg btn-slider--prev"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="/images/sprite.svg#arrow-slider-prev"></span></button>',
+          nextArrow: '<button type="button" class="btn-slider btn-slider--theme-accent btn-slider--size-lg btn-slider--next"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="/images/sprite.svg#arrow-slider-next"></span></button>',
           dots: false,
           slidesToScroll: 1,
           slidesToShow: 1
@@ -82,8 +82,8 @@ $(document).ready(function() {
           fade: false,
           speed: 340,
           arrows: true,
-          prevArrow: '<button type="button" class="btn-slider btn-slider--theme-accent-light btn-slider--size-md btn-slider--prev"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-prev"></span></button>',
-          nextArrow: '<button type="button" class="btn-slider btn-slider--theme-accent-light btn-slider--size-md btn-slider--next"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-next"></span></button>',
+          prevArrow: '<button type="button" class="btn-slider btn-slider--theme-accent-light btn-slider--size-md btn-slider--prev"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="/images/sprite.svg#arrow-slider-prev"></span></button>',
+          nextArrow: '<button type="button" class="btn-slider btn-slider--theme-accent-light btn-slider--size-md btn-slider--next"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="/images/sprite.svg#arrow-slider-next"></span></button>',
           appendArrows: $('.reviews-section__slider-control'),
           dots: false,
           slidesToScroll: 1,
@@ -159,15 +159,26 @@ $(document).ready(function() {
 
 // scroll animated viewer
 function scrollAnimated() {
-  var reveals = document.querySelectorAll('.sjs-scroll-animated');
+  var reveals = document.querySelectorAll('.js-good-section-slider-init');
+  var revealsAdvantage = document.querySelectorAll('.js-product-advantage-view');
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+    var elementVisible = 1070;
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add('is-view');
     } else {
       reveals[i].classList.remove('is-view');
+    }
+  }
+  for (var i = 0; i < revealsAdvantage.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = revealsAdvantage[i].getBoundingClientRect().top;
+    var elementVisible = 400;
+    if (elementTop < windowHeight - elementVisible) {
+      revealsAdvantage[i].classList.add('is-view');
+    } else {
+      revealsAdvantage[i].classList.remove('is-view');
     }
   }
 }
@@ -177,33 +188,60 @@ scrollAnimated();
 
 // scroll magic
 // var wh = window.innerHeight,
-//   $infoWord = $('.js-info-word');
+//   infoWord = $('.js-info-word'),
+//   infoText = $('.js-info-text'),
+//   mainBenefits = $('.js-main-benefits');
 
-// // init
-// var ctrl = new ScrollMagic.Controller({
-//   globalSceneOptions: {
-//     triggerHook: 'onLeave'
-//   }
-// });
+// var ctrl = new ScrollMagic.Controller();
 
-// $('.js-parallax-scene').each(function() {
-//   new ScrollMagic.Scene({
-//     triggerElement: this,
-//     duration: '0%'
-//   })
-//   .setPin(this)
-//   .addTo(ctrl);
-// });
-
-// var infoWordIntro = TweenMax.from($infoWord, 1, {
-//   yPercent: 0,
+// var infoWordd = TweenMax.fromTo(infoWord, 1,
+// {
 //   xPercent: 20,
-//   ease: Cubic.easeOut
+//   ease: Power1.easeIn
+// }, {
+//   xPercent: 0,
+//   ease: Power1.easeIn
 // });
 
-// new ScrollMagic.Scene({
-//   duration: '120%'
-// })
-// .setTween(infoWordIntro)
-// .triggerElement($('body')[0])
+// var scene = new ScrollMagic.Scene({
+//   trigerHook: "onEnter",
+//   duration: "80%"
+// })  
+// .setTween(infoWordd)
+// .addTo(ctrl);
+
+// var infoTextt = TweenMax.fromTo(infoText, 1,
+// {
+//   yPercent: 60,
+//   opacity: 0,
+//   ease: Power1.easeInOut
+// }, {
+//   yPercent: 0,
+//   opacity: 1,
+//   ease: Power1.easeInOut
+// });
+
+// var scene = new ScrollMagic.Scene({
+//   trigerHook: "onEnter",
+//   duration: "150%"
+// })  
+// .setTween(infoTextt)
+// .addTo(ctrl);
+
+// var mainBenefitss = TweenMax.fromTo(mainBenefits, 1,
+// {
+//   yPercent: 0,
+//   opacity: 1,
+//   ease: Power1.easeInOut
+// }, {
+//   yPercent: -500,
+//   opacity: 0,
+//   ease: Power1.easeInOut
+// });
+
+// var scene = new ScrollMagic.Scene({
+//   trigerHook: "onEnter",
+//   duration: "90%"
+// })  
+// .setTween(mainBenefitss)
 // .addTo(ctrl);

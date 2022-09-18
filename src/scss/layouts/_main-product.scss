@@ -11,8 +11,11 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: -1;
+        z-index: -2;
         @extend .img-cover;
+    }
+    &__video {
+        z-index: -1;
     }
     &__contaier {
         width: 100%;
@@ -24,12 +27,13 @@
     &__content {
         max-width: 100%;
         height: 100%;
-        padding: 160px 0;
+        padding: 160px 0 120px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         text-align: center;
         @media (max-width: $lg) {
+            padding: 140px 0;
             justify-content: center;
         }
     }

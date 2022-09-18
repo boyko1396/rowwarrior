@@ -1,6 +1,15 @@
 .good-section {
     background: $color-accent-4;
+    width: 100%;
     color: $color-white-1;
+    position: sticky;
+    top: 0;
+    transition: all .24s;
+    transition-property: opacity, visibility;
+    &.is-view ~ &:not(.is-view) {
+        opacity: 0;
+        visibility: hidden;
+    }
     &__inner {
         height: 100vh;
         min-height: 640px;

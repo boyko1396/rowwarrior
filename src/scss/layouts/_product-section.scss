@@ -9,6 +9,13 @@
                 border-radius: 10px;
             }
         }
+        &-video {
+            padding-bottom: 70%;
+            border-radius: 1rem;
+            @media (max-width: $lg) {
+                border-radius: 10px;
+            }
+        }
     }
     .slick-dots {
         @media (max-width: $lg) {
