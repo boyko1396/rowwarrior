@@ -5,6 +5,29 @@
     flex-wrap: wrap;
     position: relative;
     z-index: 0;
+    @media (max-width: $lg) {
+        background: rgba($color-black-1, .2);
+    }
+    &:nth-child(1) {
+        @media (max-width: $lg) {
+            background: #64a5b4;
+        }
+    }
+    &:nth-child(2) {
+        @media (max-width: $lg) {
+            background: #abb7b7;
+        }
+    }
+    &:nth-child(3) {
+        @media (max-width: $lg) {
+            background: #0f0c1b;
+        }
+    }
+    &:nth-child(4) {
+        @media (max-width: $lg) {
+            background: #ccd3db;
+        }
+    }
     &__media {
         width: 100%;
         height: 100%;
@@ -13,10 +36,16 @@
         left: 0;
         pointer-events: none;
         z-index: -2;
+        @extend .img-cover;
+        @media (max-width: $lg) {
+            height: 50vw;
+            position: relative;
+        }
+        @media (max-width: $sm) {
+            height: 100vw;
+        }
         &:before {
             @media (max-width: $lg) {
-                background: rgba($color-accent-1, .6);
-                backdrop-filter: blur(1px);
                 width: 100%;
                 height: 100%;
                 content: '';
@@ -26,9 +55,23 @@
                 z-index: 1;
             }
         }
-        @extend .img-cover;
+        img {
+            @media (max-width: $lg) {
+                width: 200vw;
+            }
+        }
     }
-    &__img {
+    &:nth-child(odd) &__media img {
+        @media (max-width: $lg) {
+            right: initial;
+            left: -100vw;
+        }
+    }
+    &:nth-child(even) &__media img {
+        @media (max-width: $lg) {
+            right: -100vw;
+            left: initial;
+        }
     }
     &__main {
         max-width: 50%;
@@ -46,7 +89,7 @@
         font-size: 2.2rem;
         color: $color-gray-1;
         @media (max-width: $lg) {
-            padding: 15vw var(--gap);
+            padding: 50px var(--gap);
             font-size: 22px;
             text-align: center;
         }

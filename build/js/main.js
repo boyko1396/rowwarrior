@@ -9,6 +9,7 @@ $(document).ready(function() {
   gallerySliderTab();
   scrollTarget();
   tabMainGood();
+  truncateTextReviews();
 
   // header dropdown menu mobile
   function headerMenuMobile() {
@@ -177,11 +178,19 @@ $(document).ready(function() {
       return false;
     });
   }
+
+  // truncate text reviews
+  function truncateTextReviews() {
+    $('.reviews-slider__slide-content').each(function(){
+      if($(this).text().length > 360)
+        $(this).text($(this).text().substr(0,360)+ '...');
+    });
+  }
 });
 
 // scroll animated viewer
 function scrollAnimated() {
-  var reveals = document.querySelectorAll('.js-good-section-slider-init');
+  var reveals = document.querySelectorAll('.js-good-section-view');
   var revealsAdvantage = document.querySelectorAll('.js-product-advantage-view');
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
