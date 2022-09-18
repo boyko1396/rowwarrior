@@ -64,8 +64,8 @@ $(document).ready(function() {
           fade: true,
           speed: 600,
           arrows: true,
-          prevArrow: '<button type="button" class="btn-slider btn-slider--theme-accent btn-slider--size-lg btn-slider--prev"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="/images/sprite.svg#arrow-slider-prev"></span></button>',
-          nextArrow: '<button type="button" class="btn-slider btn-slider--theme-accent btn-slider--size-lg btn-slider--next"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="/images/sprite.svg#arrow-slider-next"></span></button>',
+          prevArrow: '<button type="button" class="btn-slider btn-slider--theme-accent btn-slider--size-lg btn-slider--prev"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-prev"></span></button>',
+          nextArrow: '<button type="button" class="btn-slider btn-slider--theme-accent btn-slider--size-lg btn-slider--next"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-next"></span></button>',
           dots: false,
           slidesToScroll: 1,
           slidesToShow: 1
@@ -82,8 +82,8 @@ $(document).ready(function() {
           fade: false,
           speed: 340,
           arrows: true,
-          prevArrow: '<button type="button" class="btn-slider btn-slider--theme-accent-light btn-slider--size-md btn-slider--prev"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="/images/sprite.svg#arrow-slider-prev"></span></button>',
-          nextArrow: '<button type="button" class="btn-slider btn-slider--theme-accent-light btn-slider--size-md btn-slider--next"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="/images/sprite.svg#arrow-slider-next"></span></button>',
+          prevArrow: '<button type="button" class="btn-slider btn-slider--theme-accent-light btn-slider--size-md btn-slider--prev"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-prev"></span></button>',
+          nextArrow: '<button type="button" class="btn-slider btn-slider--theme-accent-light btn-slider--size-md btn-slider--next"><span class="btn-slider__icon-wrap"><svg class="icon btn-slider__icon"><use xlink:href="images/sprite.svg#arrow-slider-next"></span></button>',
           appendArrows: $('.reviews-section__slider-control'),
           dots: false,
           slidesToScroll: 1,
@@ -187,61 +187,61 @@ window.addEventListener('scroll', scrollAnimated);
 scrollAnimated();
 
 // scroll magic
-// var wh = window.innerHeight,
-//   infoWord = $('.js-info-word'),
-//   infoText = $('.js-info-text'),
-//   mainBenefits = $('.js-main-benefits');
+var wh = window.innerHeight,
+  infoWord = $('.js-info-word'),
+  infoText = $('.js-info-text'),
+  mainBenefits = $('.js-main-benefits');
 
-// var ctrl = new ScrollMagic.Controller();
+var ctrl = new ScrollMagic.Controller();
 
-// var infoWordd = TweenMax.fromTo(infoWord, 1,
-// {
-//   xPercent: 20,
-//   ease: Power1.easeIn
-// }, {
-//   xPercent: 0,
-//   ease: Power1.easeIn
-// });
+var infoWordd = TweenMax.fromTo(infoWord, 1,
+{
+  xPercent: 20,
+  ease: Power1.easeIn
+}, {
+  xPercent: 0,
+  ease: Power1.easeIn
+});
 
-// var scene = new ScrollMagic.Scene({
-//   trigerHook: "onEnter",
-//   duration: "80%"
-// })  
-// .setTween(infoWordd)
-// .addTo(ctrl);
+var scene = new ScrollMagic.Scene({
+  trigerHook: "onEnter",
+  duration: "80%"
+})  
+.setTween(infoWordd)
+.addTo(ctrl);
 
-// var infoTextt = TweenMax.fromTo(infoText, 1,
-// {
-//   yPercent: 60,
-//   opacity: 0,
-//   ease: Power1.easeInOut
-// }, {
-//   yPercent: 0,
-//   opacity: 1,
-//   ease: Power1.easeInOut
-// });
+var infoTextt = TweenMax.fromTo(infoText, 1,
+{
+  yPercent: 60,
+  opacity: 0,
+  ease: Power1.easeInOut
+}, {
+  yPercent: 0,
+  opacity: 1,
+  ease: Power1.easeInOut
+});
 
-// var scene = new ScrollMagic.Scene({
-//   trigerHook: "onEnter",
-//   duration: "150%"
-// })  
-// .setTween(infoTextt)
-// .addTo(ctrl);
+var scene = new ScrollMagic.Scene({
+  trigerHook: "onEnter",
+  duration: "150%"
+})  
+.setTween(infoTextt)
+.addTo(ctrl);
 
-// var mainBenefitss = TweenMax.fromTo(mainBenefits, 1,
-// {
-//   yPercent: 0,
-//   opacity: 1,
-//   ease: Power1.easeInOut
-// }, {
-//   yPercent: -500,
-//   opacity: 0,
-//   ease: Power1.easeInOut
-// });
+var mainBenefitss = TweenMax.fromTo(mainBenefits, 1,
+{
+  yPercent: 0,
+  opacity: 1,
+  ease: Power1.easeInOut
+}, {
+  yPercent: -500,
+  opacity: 0,
+  ease: Power1.easeInOut
+});
 
-// var scene = new ScrollMagic.Scene({
-//   trigerHook: "onEnter",
-//   duration: "90%"
-// })  
-// .setTween(mainBenefitss)
-// .addTo(ctrl);
+var scene = new ScrollMagic.Scene({
+  trigerHook: "onEnter",
+  duration: "90%"
+})  
+.setTween(mainBenefitss)
+.addTo(ctrl);
