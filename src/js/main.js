@@ -196,16 +196,16 @@ var ctrl = new ScrollMagic.Controller();
 
 var infoWordd = TweenMax.fromTo(infoWord, 1,
 {
-  xPercent: 20,
+  xPercent: 100,
   ease: Power1.easeIn
 }, {
-  xPercent: 0,
+  xPercent: -140,
   ease: Power1.easeIn
 });
 
 var scene = new ScrollMagic.Scene({
   trigerHook: "onEnter",
-  duration: "80%"
+  duration: "140%"
 })  
 .setTween(infoWordd)
 .addTo(ctrl);

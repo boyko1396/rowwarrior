@@ -3,6 +3,12 @@
     color: $color-gray-1;
     position: relative;
     z-index: 0;
+        @media (max-width: $lg) {
+            background: linear-gradient(55deg, #1e5799 60%,#5971eb 100%);
+            height: auto;
+            padding-bottom: 0;
+            position: relative;
+        }
     &__media {
         width: 100%;
         height: 100%;
@@ -13,7 +19,7 @@
         z-index: -1;
         @media (max-width: $lg) {
             height: auto;
-            padding-bottom: 50%;
+            padding-bottom: 0;
             position: relative;
         }
     }
@@ -21,12 +27,16 @@
         height: 100%;
         @extend .img-cover;
         @media (max-width: $lg) {
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
+            height: auto;
         }
         img {
+            @media (max-width: $lg) {
+                width: 100%;
+                height: auto;
+                display: block;
+                position: relative;
+                object-fit: initial;
+            }
         }
     }
     &__container {
@@ -98,7 +108,9 @@
 .good-info-section-list {
     &__item {
         &:nth-child(even) {
-            background: $color-accent-5;
+            @media (min-width: $lg-mf) {
+                background: $color-accent-5;
+            }
         }
     }
 }

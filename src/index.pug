@@ -35,6 +35,7 @@ body
         .good-section__inner
           .good-section__media
             picture.good-section__picture
+              source(srcset="images/good-img-1-mobile.png", media="(max-width: 1200px)")
               img(src="images/good-img-1.png", alt="Get a solid, low-impact, full-body workout at home")
           .good-section__content
             ul.nav-good.nav-good--size-md.nav-good--theme-white.good-section__nav
@@ -53,12 +54,13 @@ body
       section.js-good-section-slider-init.good-section.good-section-list__item
         .good-section__inner
           .good-section__media
-            picture.good-section__picture
-              img(src="images/good-img-2.png", alt="Unbox, unwrap, assemble, and row")
             .video-cover.good-section__video
-              video(autoplay, loop, playsinline, muted).video-cover__el
+              video(autoplay, loop, playsinline, muted).d-lg-none.video-cover__el
                 source(src="media/video-good-1.webm", type="video/webm")
                 source(src="media/video-good-1.mp4", type="video/mp4")
+              video(autoplay, loop, playsinline, muted).d-lg-block.video-cover__el
+                source(src="media/video-good-1-mobile.webm", type="video/webm")
+                source(src="media/video-good-1-mobile.mp4", type="video/mp4")
           .good-section__content
             ul.nav-good.nav-good--size-md.nav-good--theme-white.good-section__nav
               li.nav-good__item
@@ -77,6 +79,7 @@ body
         .good-section__inner
           .good-section__media
             picture.good-section__picture
+              source(srcset="images/good-img-3-mobile.png", media="(max-width: 1200px)")
               img(src="images/good-img-3.png", alt="No space? No problem")
           .good-section__content
             ul.nav-good.nav-good--size-md.nav-good--theme-white.good-section__nav
@@ -96,6 +99,7 @@ body
         .good-section__inner
           .good-section__media
             picture.good-section__picture
+              source(srcset="images/good-img-4-mobile.png", media="(max-width: 1200px)")
               img(src="images/good-img-4.png", alt="Perfect for beginners & experienced warriors alike")
           .good-section__content
             ul.nav-good.nav-good--size-md.nav-good--theme-white.good-section__nav
@@ -141,6 +145,7 @@ body
               p The ultimate full body workout, Row Warrior delivers tangible results in minimal time, without complicated routines or loads of equipment. A simple 15 to 20 minute rowing session done 2 to 3 times a week will help you build strength, boost cardio, increase endurance, and torch fat.
         .good-info-section__media
           picture.good-info-section__picture
+            source(srcset="images/good-info-img-1-mobile.png", media="(max-width: 1200px)")
             img(src="images/good-info-img-1.jpg", alt="Get a solid workout without the fuss")
       section.good-info-section.good-info-section-list__item
         .container.good-info-section__container
@@ -157,6 +162,7 @@ body
               p When it comes to staying motivated, there’s nothing more powerful than seeing your progress. With its built-in Bluetooth LED monitor, Row Warrior will help you track time, distance, row count, calories burned, heart rate, and more.
         .good-info-section__media
           picture.good-info-section__picture
+            source(srcset="images/good-info-img-2-mobile.png", media="(max-width: 1200px)")
             img(src="images/good-info-img-2.jpg", alt="Track your stats & watch your gains")
       section.good-info-section.good-info-section-list__item
         .container.good-info-section__container
@@ -173,6 +179,7 @@ body
               p Made with an industrial-grade steel frame that can handle weights of up to 550 pounds, Row Warrior sturdy design features wear-resistant surfaces that can withstand heavy use so it will look sleek and clean for years to come.
         .good-info-section__media
           picture.good-info-section__picture
+            source(srcset="images/good-info-img-3-mobile.png", media="(max-width: 1200px)")
             img(src="images/good-info-img-3.jpg", alt="Battle-tested & built to last")
 
     section.appeal-section

@@ -2,13 +2,17 @@
     background: $color-accent-4;
     width: 100%;
     color: $color-white-1;
-    position: sticky;
-    top: 0;
     transition: all .24s;
     transition-property: opacity, visibility;
+    @media (min-width: $lg-mf) {
+        position: sticky;
+        top: 0;
+    }
     &.is-view ~ &:not(.is-view) {
-        opacity: 0;
-        visibility: hidden;
+        @media (min-width: $lg-mf) {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
     &__inner {
         height: 100vh;
@@ -32,9 +36,7 @@
             width: 100%;
             max-width: 100%;
             height: auto;
-            padding-bottom: 50%;
             flex: initial;
-            position: relative;
         }
     }
     &__picture {
@@ -43,18 +45,32 @@
         z-index: -2;
         @extend .img-cover;
         @media (max-width: $lg) {
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
+            height: auto;
         }
         img {
+            @media (max-width: $lg) {
+                width: 100%;
+                height: auto;
+                display: block;
+                position: relative;
+                object-fit: initial;
+            }
         }
     }
     &__video {
         z-index: -1;
+        @media (max-width: $lg) {
+            height: initial;
+            margin-top: -80vw;
+            position: relative;
+        }
         .video-cover__el {
             object-position: center bottom;
+            @media (max-width: $lg) {
+                height: initial;
+                object-fit: initial;
+                position: relative;
+            }
         }
     }
     &__content {
@@ -133,5 +149,10 @@
     & > div:nth-child(even) &__item,
     &__item:nth-child(even) {
         background: $color-accent-5;
+    }
+    &__item:nth-child(2) {
+        @media (max-width: $lg) {
+            background: #50b7ff;
+        }
     }
 }

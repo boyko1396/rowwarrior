@@ -1,0 +1,29 @@
+include includes/head.pug
+
+body
+
+  #root
+    include includes/header.pug
+
+    main(role="main").main
+      picture.main__bg
+        img(src="images/main-img-3.jpg", alt="Contact us")
+      .container.main__contaier
+        .main__content
+          h1.title-size-1.main__title Contact us
+
+    .contact-us-section
+      .container.contact-us-section__container
+        .contact-us-section__media
+          picture.contact-us-section__img
+            img(src="images/contact-us-img.jpg", alt="We want to hear from you!")
+        .contact-us-section__main
+          .content.contact-us-section__content
+            p We want to hear from you!<br>Send us your questions and feedback to:<br>
+              a(href="mailto:support@rowwarrior.com", target="_blank") support@rowwarrior.com
+            p For call-back support, please send a text message to<br> (512) 750-7608.<br>Kindly note this number only receives text messages.
+            p PO Box 90665<br>Austin, TX 78709
+
+    include includes/footer.pug
+
+  include includes/foot.pug
