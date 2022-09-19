@@ -139,7 +139,7 @@ $(document).ready(function() {
         $carousel.on('afterChange', function(event, slick, currentSlide) {
             var vid = $(slick.$slides[currentSlide]).find('video');
             if (vid.length > 0) {
-              $slider.slick('slickPause');
+              $carousel.slick('slickPause');
               $(vid).get(0).play();
             }
           });
