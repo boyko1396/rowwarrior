@@ -115,6 +115,7 @@ $(document).ready(function() {
     if ($('.js-product-slider-init')[0]){
       $('.js-product-slider-init').each(function(){
         var $carousel = $(this);
+        
         $carousel.slick({
           fade: true,
           speed: 600,
@@ -134,6 +135,14 @@ $(document).ready(function() {
             }
           ]
         });
+
+        $carousel.on('afterChange', function(event, slick, currentSlide) {
+            var vid = $(slick.$slides[currentSlide]).find('video');
+            if (vid.length > 0) {
+              $slider.slick('slickPause');
+              $(vid).get(0).play();
+            }
+          });
       });
     }
   }
