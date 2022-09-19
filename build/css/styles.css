@@ -3816,6 +3816,11 @@ svg,
   overflow-y: auto;
   z-index: 998;
 }
+@media (max-width: 1199px) {
+  .modal-video {
+    padding: 60px 16px;
+  }
+}
 .modal-video:not(.is-show) {
   pointer-events: none;
   opacity: 0;
@@ -3838,6 +3843,11 @@ svg,
   margin: 0 auto;
   display: inline-block;
   vertical-align: middle;
+}
+@media (max-width: 1199px) {
+  .modal-video__inner {
+    width: 100%;
+  }
 }
 .modal-video__media {
   padding-bottom: 56.25%;
