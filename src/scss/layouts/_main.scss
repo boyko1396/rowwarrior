@@ -3,6 +3,7 @@
     height: 100vh;
     min-height: 560px;
     color: $color-white-1;
+    overflow: hidden;
     position: relative;
     z-index: 0;
     @media (max-width: $sm) {

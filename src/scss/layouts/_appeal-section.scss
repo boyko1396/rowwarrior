@@ -1,6 +1,7 @@
 .appeal-section {
     background: $color-white-1;
     padding: 18rem 0 23rem;
+    overflow: hidden;
     position: relative;
     z-index: 0;
     @media (max-width: $lg) {

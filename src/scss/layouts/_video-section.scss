@@ -1,6 +1,7 @@
 .video-section {
     background: $color-white-1;
     padding-bottom: 50.520833333%;
+    overflow: hidden;
     position: relative;
     z-index: 0;
     @media (max-width: $sm) {

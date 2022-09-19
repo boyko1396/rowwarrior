@@ -1,4 +1,5 @@
 .reviews-slider {
+    overflow: hidden;
     &__slide {
         padding: 0 10px;
         @media (max-width: $lg) {

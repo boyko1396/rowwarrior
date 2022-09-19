@@ -4,6 +4,7 @@
     color: $color-white-1;
     transition: all .24s;
     transition-property: opacity, visibility;
+    overflow: hidden;
     @media (min-width: $lg-mf) {
         position: sticky;
         top: 0;

@@ -7,6 +7,7 @@ body
 
     main(role="main").main-product
       picture.main-product__bg
+        source(srcset="images/main-video-cover-black-mobile.jpg", media="(max-width: 1200px)")
         img(src="images/main-img-1.jpg", alt="Unleash your inner warrior")
       .video-cover.main-product__video
         video(autoplay, loop, playsinline, muted).video-cover__el
@@ -407,17 +408,24 @@ body
         .good-appeal__inner
           .good-appeal__media
             picture.good-appeal__picture
+              img(src="images/good-appeal-img-1.png", alt="Train like a warrior, transform your life - and do it all without leaving your door")
+            picture.good-appeal__picture.is-show
               img(src="images/good-appeal-img-2.png", alt="Train like a warrior, transform your life - and do it all without leaving your door")
           .good-appeal__info
             .good-appeal__content
               ul.nav-good.nav-good--size-sm.nav-good--theme-accent.good-appeal__nav
                 li.nav-good__item
-                  a(href="product_black.html").nav-good__link.is-active Black
+                  a(href="#").js-tab-link.nav-good__link.is-active Black
                 li.nav-good__item
-                  a(href="product_white.html").nav-good__link White
-              .good-appeal__suptitle Are you ready?
-              h2.good-appeal__title Train like a warrior, transform your life - and do it all without leaving your door
-              a(href="https://amzn.com/dp/B08B3GJHL6", target="_blank").btn.btn--theme-accent.good-appeal__btn Let’s row
+                  a(href="#").js-tab-link.nav-good__link White
+              .good-appeal__tab
+                .good-appeal__suptitle Are you ready?
+                h2.good-appeal__title Train like a warrior, transform your life - and do it all without leaving your door
+                a(href="https://amzn.com/dp/B08B3GJHL6", target="_blank").btn.btn--theme-accent.good-appeal__btn Let’s row
+              .good-appeal__tab.is-show
+                .good-appeal__suptitle Are you ready?
+                h2.good-appeal__title Train like a warrior, transform your life - and do it all without leaving your door
+                a(href="https://amzn.com/dp/B08B3GJHL6", target="_blank").btn.btn--theme-accent.good-appeal__btn Let’s row
 
     include includes/footer.pug
 

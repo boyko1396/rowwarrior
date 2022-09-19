@@ -69,6 +69,7 @@
 
 .product-advantage {
     padding: 120px 0 110px;
+    overflow: hidden;
     @media (max-width: $lg) {
         padding: 40px 0 80px;
     }

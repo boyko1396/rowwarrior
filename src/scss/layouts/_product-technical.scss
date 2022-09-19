@@ -2,6 +2,7 @@
     background: $color-accent-8;
     padding: 12rem 0 8rem;
     color: $color-white-1;
+    overflow: hidden;
     @media (max-width: $lg) {
         padding: 60px 0 30px;
     }

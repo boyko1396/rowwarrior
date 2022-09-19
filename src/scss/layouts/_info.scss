@@ -1,6 +1,7 @@
 .info {
     background: $color-white-1;
     padding: 10rem 0 24.2rem;
+    overflow: hidden;
     position: relative;
     z-index: -1;
     @media (max-width: $lg) {

@@ -1,6 +1,7 @@
 .good-info-section {
     background: $color-accent-4;
     color: $color-gray-1;
+    overflow: hidden;
     position: relative;
     z-index: 0;
         @media (max-width: $lg) {

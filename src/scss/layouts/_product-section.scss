@@ -116,6 +116,7 @@
 .product-section {
     background: $color-white-1;
     padding: 8.0rem 0;
+    overflow: hidden;
     position: relative;
     z-index: 0;
     @media (max-width: $lg) {

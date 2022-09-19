@@ -7,6 +7,7 @@ body
 
     main(role="main").main-product
       picture.main-product__bg
+        source(srcset="images/main-video-cover-white-mobile.jpg", media="(max-width: 1200px)")
         img(src="images/main-img-5.jpg", alt="Unleash your inner warrior")
       .video-cover.main-product__video
         video(autoplay, loop, playsinline, muted).video-cover__el
@@ -149,7 +150,7 @@ body
         .container.product-info-card__container
           .product-info-card__media
             picture.product-info-card__picture
-              img(src="images/product-info-card-3.jpg", alt="Get Maximum Results in Minimal Time")
+              img(src="images/product-info-card-3.png", alt="Get Maximum Results in Minimal Time")
           .product-info-card__aside
             .product-info-card__content
               .product-info-card__content-suptitle Full-body
@@ -280,22 +281,22 @@ body
       .js-gallery-slider-init.gallery-slider__block
         .gallery-slider__block-slide
           picture.gallery-slider__block-slide-media
-            img(src="images/video-slider-white-1.jpg", alt="Gallery photo white 1")
+            img(src="images/video-slider-black-1.jpg", alt="Gallery photo black 1")
         .gallery-slider__block-slide
           picture.gallery-slider__block-slide-media
-            img(src="images/video-slider-white-2.jpg", alt="Gallery photo white 2")
+            img(src="images/video-slider-black-2.jpg", alt="Gallery photo black 2")
         .gallery-slider__block-slide
           picture.gallery-slider__block-slide-media
-            img(src="images/video-slider-white-3.jpg", alt="Gallery photo white 3")
+            img(src="images/video-slider-black-3.jpg", alt="Gallery photo black 3")
         .gallery-slider__block-slide
           picture.gallery-slider__block-slide-media
-            img(src="images/video-slider-white-4.jpg", alt="Gallery photo white 4")
+            img(src="images/video-slider-black-4.jpg", alt="Gallery photo black 4")
         .gallery-slider__block-slide
           picture.gallery-slider__block-slide-media
-            img(src="images/video-slider-white-5.jpg", alt="Gallery photo white 5")
+            img(src="images/video-slider-black-5.jpg", alt="Gallery photo black 5")
         .gallery-slider__block-slide
           picture.gallery-slider__block-slide-media
-            img(src="images/video-slider-white-6.jpg", alt="Gallery photo white 6")
+            img(src="images/video-slider-black-6.jpg", alt="Gallery photo black 6")
       .js-gallery-slider-init.gallery-slider__block.is-active
         .gallery-slider__block-slide
           picture.gallery-slider__block-slide-media
@@ -406,18 +407,25 @@ body
       .container.good-appeal__container
         .good-appeal__inner
           .good-appeal__media
-            picture.good-appeal__picture
+            picture.good-appeal__picture.is-show
               img(src="images/good-appeal-img-1.png", alt="Train like a warrior, transform your life - and do it all without leaving your door")
+            picture.good-appeal__picture
+              img(src="images/good-appeal-img-2.png", alt="Train like a warrior, transform your life - and do it all without leaving your door")
           .good-appeal__info
             .good-appeal__content
               ul.nav-good.nav-good--size-sm.nav-good--theme-accent.good-appeal__nav
                 li.nav-good__item
-                  a(href="product_black.html").nav-good__link Black
+                  a(href="#").js-tab-link.nav-good__link Black
                 li.nav-good__item
-                  a(href="product_white.html").nav-good__link.is-active White
-              .good-appeal__suptitle Are you ready?
-              h2.good-appeal__title Train like a warrior, transform your life - and do it all without leaving your door
-              a(href="#").btn.btn--theme-accent.good-appeal__btn Let’s row
+                  a(href="#").js-tab-link.nav-good__link.is-active White
+              .good-appeal__tab.is-show
+                .good-appeal__suptitle Are you ready?
+                h2.good-appeal__title Train like a warrior, transform your life - and do it all without leaving your door
+                a(href="https://amzn.com/dp/B08B3GJHL6", target="_blank").btn.btn--theme-accent.good-appeal__btn Let’s row
+              .good-appeal__tab
+                .good-appeal__suptitle Are you ready?
+                h2.good-appeal__title Train like a warrior, transform your life - and do it all without leaving your door
+                a(href="https://amzn.com/dp/B08B3GJHL6", target="_blank").btn.btn--theme-accent.good-appeal__btn Let’s row
 
     include includes/footer.pug
 

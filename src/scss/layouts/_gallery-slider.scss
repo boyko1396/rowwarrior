@@ -1,5 +1,6 @@
 .gallery-slider {
     position: relative;
+    overflow: hidden;
     &__block {
         height: auto;
         &:not(.is-active) {
