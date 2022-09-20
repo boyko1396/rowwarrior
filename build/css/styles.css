@@ -319,6 +319,8 @@ svg,
   list-style-type: none;
   box-shadow: inset 0 0 0 0.1rem currentColor;
   border-radius: 4rem;
+  position: relative;
+  z-index: 0;
 }
 @media (max-width: 1199px) {
   .nav-good {
@@ -363,6 +365,18 @@ svg,
     opacity: 0.6;
   }
 }
+.nav-good__bg {
+  width: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  transition: all 0.4s;
+  z-index: -1;
+}
 .nav-good--theme-white .nav-good__link {
   color: #fff;
 }
@@ -376,6 +390,20 @@ svg,
 .nav-good--theme-accent .nav-good__link.is-active {
   background: #05245a;
   color: #fff;
+}
+.nav-good--theme-white.js-tab-nav .nav-good__link.is-active {
+  background: transparent;
+  color: #05245a;
+}
+.nav-good--theme-accent.js-tab-nav .nav-good__link.is-active {
+  background: transparent;
+  color: #fff;
+}
+.nav-good--theme-white.js-tab-nav .nav-good__bg {
+  background: #fff;
+}
+.nav-good--theme-accent.js-tab-nav .nav-good__bg {
+  background: #05245a;
 }
 .nav-good--size-sm .nav-good__link {
   padding: 1.5rem;

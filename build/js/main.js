@@ -10,6 +10,7 @@ $(document).ready(function() {
   scrollTarget();
   tabMainGood();
   truncateTextReviews();
+  linkTabSlide();
 
   // header dropdown menu mobile
   function headerMenuMobile() {
@@ -193,6 +194,32 @@ $(document).ready(function() {
     $('.reviews-slider__slide-content').each(function(){
       if($(this).text().length > 360)
         $(this).text($(this).text().substr(0,360)+ '...');
+    });
+  }
+
+  // current link tab nav
+  function linkTabSlide() {
+    const indicator = document.querySelector('.js-tab-nav .nav-good__bg');
+    const items = document.querySelectorAll('.js-tab-nav li:not(.nav-good__bg) a');
+
+    function handleIndicator(el) {
+      items.forEach(item => {
+        item.classList.remove('is-active');
+        item.removeAttribute('style');
+      });
+      
+      indicator.style.width = `${el.offsetWidth}px`;
+      indicator.style.left = `${el.offsetLeft}px`;
+
+      el.classList.add('is-active');
+    }
+
+    items.forEach((item, index) => {
+      item.addEventListener('click', (e) => {
+        handleIndicator(e.target);
+        e.preventDefault();
+      });
+      item.classList.contains('is-active') && handleIndicator(item);
     });
   }
 });
